@@ -1,0 +1,194 @@
+﻿<Page
+    x:Class="MyBloodAppLogin.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MyBloodAppLogin"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MyBlood Login"
+    Width="419"
+    Height="800"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    mc:Ignorable="d">
+    <Grid Background="{DynamicResource MaterialDesignPaper}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition Width="192*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel
+            Margin="-9,-9,10,0"
+            RenderTransformOrigin="0.5,0.5"
+            ScrollViewer.CanContentScroll="True"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            UseLayoutRounding="False" Grid.ColumnSpan="2">
+
+            <!--  Tambahkan Frame dengan nama secFrame  -->
+            <Frame x:Name="secFrame" NavigationUIVisibility="Hidden" />
+
+            <Image
+                x:Name="Logo"
+                Width="68"
+                Height="35"
+                Margin="0,20,0,5"
+                Source="/LOGO.png" />
+            <TextBlock
+                x:Name="AppName"
+                Margin="0,0,0,5"
+                HorizontalAlignment="Center"
+                FontFamily="Copperplate Gothic Bold"
+                FontSize="10"
+                Text="My Blood App"
+                TextWrapping="Wrap" />
+            <TextBlock
+                x:Name="PageName"
+                Margin="0,0,0,5"
+                HorizontalAlignment="Center"
+                FontFamily="Copperplate Gothic Light"
+                FontSize="10"
+                Text="Registration Form"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtEmailAddressRegist"
+                Width="300"
+                Height="55"
+                Margin="0,10,0,0"
+                materialDesign:HintAssist.Hint="Enter your email address"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextChanged="txtEmailAddressRegist_TextChanged"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtNama"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your name"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtNIK"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your NIK"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+            <ComboBox
+                x:Name="boxGender"
+                Width="300"
+                Height="50"
+                Margin="0,5,0,5"
+                materialDesign:HintAssist.Hint="    Jenis Kelamin"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignComboBox}">
+                <ComboBoxItem Content="   Laki-Laki" />
+                <ComboBoxItem Content="   Perempuan" />
+            </ComboBox>
+            <TextBox
+                x:Name="txtAlamat"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your address"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtTanggalLahir"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your birthday date (dd/mm/yyyy)"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="16"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+            <ComboBox
+                x:Name="boxBloodType"
+                Width="300"
+                Height="50"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="    Blood Type"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignComboBox}" SelectionChanged="boxBloodType_SelectionChanged">
+                <ComboBoxItem Content="   A+" />
+                <ComboBoxItem Content="   A-" />
+                <ComboBoxItem Content="   B+" />
+                <ComboBoxItem Content="   B-" />
+                <ComboBoxItem Content="   AB" />
+                <ComboBoxItem Content="   O" />
+            </ComboBox>
+            <TextBox
+                x:Name="txtBodyWeight"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your body weight"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+            <TextBox
+                x:Name="txtPassword"
+                Width="300"
+                Height="55"
+                Margin="0,5,0,0"
+                materialDesign:HintAssist.Hint="Enter your password"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+
+            <Button
+                x:Name="Register"
+                Width="300"
+                Height="35"
+                Margin="0,10,0,0"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Click="Register_Click"
+                Content="Register"
+                FontSize="20"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}" />
+
+            <Button
+                x:Name="AdaAkun"
+                Width="300"
+                Height="35"
+                Margin="0,10,0,0"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Click="AdaAkun_Click"
+                Content="Sudah Ada Akun? Login"
+                FontSize="18"
+                Style="{StaticResource ResourceKey=MaterialDesignFlatMidBgButton}" />
+
+        </StackPanel>
+    </Grid>
+</Page>

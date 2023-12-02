@@ -1,0 +1,360 @@
+﻿<Window
+    x:Class="MyBloodAppLogin.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MyBloodAppLogin"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MyBlood Login"
+    Width="450"
+    Height="800"
+    AllowsTransparency="True"
+    Background="{x:Null}"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <materialDesign:Card
+        Margin="25"
+        Background="{DynamicResource MaterialDesignPaper}"
+        UniformCornerRadius="20">
+
+        <StackPanel ScrollViewer.CanContentScroll="True" UseLayoutRounding="False">
+            <!--  Tambahkan Frame dengan nama mainFrame  -->
+            <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" />
+            <Grid
+                Grid.Row="1"
+                Grid.Column="5"
+                Height="46">
+
+                <!--  // Exit Button //  -->
+                <Button
+                    x:Name="ExitBtn"
+                    Width="21"
+                    Height="27"
+                    Margin="364,11,0,0"
+                    HorizontalAlignment="Left"
+                    Click="ExitBtn_Click"
+                    RenderTransformOrigin="0.527,0.787"
+                    Style="{StaticResource CloseBtnStyle}" />
+
+                <!--  // MinimizeButton // -->
+                <Button
+                    x:Name="MinimizeBtn"
+                    Width="21"
+                    Height="27"
+                    Margin="334,11,0,0"
+                    HorizontalAlignment="Left"
+                    Click="Minimize_Click"
+                    RenderTransformOrigin="0.4 ,0.787"
+                    Style="{StaticResource MinimizeBtnStyle}" />
+
+
+            </Grid>
+            <Image
+                x:Name="Logo"
+                Width="159"
+                Height="112"
+                Margin="0,10,0,5"
+                Source="/LOGO.png" />
+
+            <TextBlock
+                x:Name="Welcome"
+                Margin="0,20,0,5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Copperplate Gothic Bold"
+                FontSize="20"
+                Text="Selamat Datang"
+                TextWrapping="Wrap" />
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="Copperplate Gothic Light"
+                FontSize="18"
+                Text="Silahkan Masuk ke Akun Anda"
+                TextWrapping="Wrap" />
+
+            <TextBox
+                x:Name="txtEmailAddress"
+                Width="300"
+                Height="55"
+                Margin="0,50,0,0"
+                materialDesign:HintAssist.Hint="Enter your email address"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="2"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                TextWrapping="Wrap" />
+
+            <PasswordBox
+                x:Name="txtPassword"
+                Width="300"
+                Height="55"
+                Margin="0,25,0,0"
+                materialDesign:HintAssist.Hint="Enter Your Password"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                FontFamily="Sitka Banner"
+                FontSize="18"
+                Style="{StaticResource MaterialDesignOutlinedPasswordBox}" />
+
+            <Button
+                x:Name="Login"
+                Width="300"
+                Height="55"
+                Margin="0,25,0,0"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Click="Login_Click"
+                Content="Masuk"
+                FontSize="20"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}" />
+
+
+            <Button
+                x:Name="NoAccount"
+                Width="300"
+                Height="55"
+                Margin="0,20,0,0"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Click="NoAccount_Click"
+                Content="Belum Punya Akun? Daftar"
+                FontSize="18"
+                Style="{StaticResource ResourceKey=MaterialDesignFlatMidBgButton}" />
+
+            <TextBox
+                x:Name="Copyright"
+                Width="216"
+                Height="22"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                BorderThickness="0,0,0,0"
+                FontFamily="Sitka Banner"
+                FontWeight="Bold"
+                Text="© MyBlood App Team for OOP Class DTETI"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+
+            <!--  Dock Bar Menu  -->
+            <Grid
+                Grid.Row="2"
+                Grid.Column="4"
+                Height="50"
+                Margin="0,78,0,0">
+
+                <Border
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Background="DarkRed"
+                    CornerRadius="0,0,0,0" />
+
+                <Grid Grid.Row="2" Grid.Column="7">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  News  -->
+                    <Button
+                        x:Name="News"
+                        Grid.Column="1"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\news_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=News}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="News" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Daftar Event  -->
+                    <Button
+                        x:Name="Event"
+                        Grid.Column="2"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=Event}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Event" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Home  -->
+                    <Button
+                        x:Name="Home"
+                        Grid.Column="3"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=Home, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=Home}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Home" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Account  -->
+                    <Button
+                        x:Name="Account"
+                        Grid.Column="4"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=Account, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=Account}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Account" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+                    </Button>
+
+                    <!--  Setting  -->
+                    <Button
+                        x:Name="Setting"
+                        Grid.Column="5"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
+                        </Button.Background>
+                        <Popup
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=Setting, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=Setting}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Setting" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+                    </Button>
+
+                </Grid>
+
+            </Grid>
+        </StackPanel>
+
+    </materialDesign:Card>
+
+</Window>
