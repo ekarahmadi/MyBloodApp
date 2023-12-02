@@ -40,7 +40,7 @@
                     RenderTransformOrigin="0.527,0.787"
                     Style="{StaticResource CloseBtnStyle}" />
 
-                <!--  // MinimizeButton // -->
+                <!--  // MinimizeButton //  -->
                 <Button
                     x:Name="MinimizeBtn"
                     Width="21"
@@ -104,7 +104,7 @@
 
             <Button
                 x:Name="Login"
-                Width="400"
+                Width="300"
                 Height="55"
                 Margin="0,25,0,0"
                 materialDesign:ButtonAssist.CornerRadius="15"
