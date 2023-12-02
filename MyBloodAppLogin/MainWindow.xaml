@@ -104,7 +104,7 @@
 
             <Button
                 x:Name="Login"
-                Width="300"
+                Width="400"
                 Height="55"
                 Margin="0,25,0,0"
                 materialDesign:ButtonAssist.CornerRadius="15"
