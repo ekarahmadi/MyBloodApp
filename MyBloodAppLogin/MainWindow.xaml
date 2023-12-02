@@ -121,7 +121,7 @@
                 Margin="0,20,0,0"
                 materialDesign:ButtonAssist.CornerRadius="15"
                 Click="NoAccount_Click"
-                Content="Belum Punya Akun? Daftar"
+                Content="KONTOLOLLLLL"
                 FontSize="18"
                 Style="{StaticResource ResourceKey=MaterialDesignFlatMidBgButton}" />
 
