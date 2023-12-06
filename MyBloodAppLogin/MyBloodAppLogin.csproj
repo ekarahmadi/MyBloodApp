@@ -32,4 +32,10 @@
     <Folder Include="DaftarVolunteer\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Daftar Event\DaftarEvent2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

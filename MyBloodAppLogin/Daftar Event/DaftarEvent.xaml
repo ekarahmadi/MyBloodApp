@@ -41,9 +41,11 @@
 " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,505,0,0"/>
         <TextBox x:Name="g" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="18" Margin="38,526,37,239" materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="Login" Content="Selanjutnya" Margin="38,671,39,74" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+        <TextBlock TextWrapping="Wrap" Text="Deskripsi Acara" FontFamily="Copperplate Gothic Light" FontSize="15
+" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,578,0,0"/>
+        <TextBox x:Name="h" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="18" Margin="38,593,37,172" materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="toa" Content="Term of agreement" Margin="140,623,141,145" FontSize="12" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Click="Login_Click"/>
+        <Button x:Name="Login" Content="Selanjutnya" Margin="38,656,39,89" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
 
         <StackPanel Margin="0,745,-1,0" Background="#FF0000"
             Orientation="Horizontal" Height="55
@@ -75,7 +77,5 @@
 
         </StackPanel>
         <TextBlock x:Name="judul_Copy" Margin="79,44,0,0" TextWrapping="Wrap" Text="Donor Darah" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <CheckBox Content="Dengan Ini anda sebagai panitia event telah menyetujui" HorizontalAlignment="Left" Margin="38,580,0,0" VerticalAlignment="Top"/>
-        <Label Content="Term of agreement yang ditetapkan oleh aplikasi" HorizontalAlignment="Left" Margin="57,594,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
