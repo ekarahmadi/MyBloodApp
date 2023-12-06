@@ -28,4 +28,8 @@
     <Resource Include="LOGO.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DaftarVolunteer\" />
+  </ItemGroup>
+
 </Project>
