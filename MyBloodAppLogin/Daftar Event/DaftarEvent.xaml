@@ -41,7 +41,7 @@
 " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,505,0,0"/>
         <TextBox x:Name="g" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="18" Margin="38,526,37,239" materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="Login" Content="Daftarkan Kegiatan!" Margin="38,671,39,74" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+        <Button x:Name="Login" Content="Selanjutnya" Margin="38,671,39,74" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
 
         <Button x:Name="toa" Content="Term of agreement" Margin="140,623,141,145" FontSize="12" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Click="Login_Click"/>
 
