@@ -174,7 +174,7 @@
                         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\news_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -212,7 +212,7 @@
                         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -250,7 +250,7 @@
                         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -288,7 +288,7 @@
                         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -325,7 +325,7 @@
                         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
                             Width="80"

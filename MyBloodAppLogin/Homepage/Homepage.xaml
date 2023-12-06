@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:MyBloodAppLogin.Homepage"
         mc:Ignorable="d"
         Title="Homepage" Height="800" Width="450"
@@ -12,7 +13,7 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
     
-      <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" Margin="25">
+    <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" Margin="25">
         <Grid>
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
@@ -24,14 +25,14 @@
             <Button x:Name="MainVolunteer" Margin="30,300,220,300" Width="150" Height="150" Content="" BorderThickness="0" BorderBrush="Transparent" Background="#FFFF5050">
                 <Button.ContentTemplate>
                     <DataTemplate>
-                        <Image Source="\Donor.png"/>
+                        <Image Source="\Assets\Donor.png"/>
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
             <Button x:Name="MainEvent" Margin="220,300,30,300" Width="150" Height="150" Content="Event" Click="MainEvent_Click" Background="#FFFF5050"  BorderThickness="2">
                 <Button.ContentTemplate>
                     <DataTemplate>
-                        <Image Source="\DaftarEvent.png"/>
+                        <Image Source="\Assets\DaftarEvent.png"/>
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
