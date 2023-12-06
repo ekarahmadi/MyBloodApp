@@ -6,7 +6,7 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:MyBloodAppLogin.Daftar_Event"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="419"
+      d:DesignHeight="800" d:DesignWidth="450"
       Title="DaftarEvent">
 
     <Grid Background="White">
