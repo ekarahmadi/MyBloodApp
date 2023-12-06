@@ -28,8 +28,4 @@
     <Resource Include="LOGO.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Homepage\" />
-  </ItemGroup>
-
 </Project>
