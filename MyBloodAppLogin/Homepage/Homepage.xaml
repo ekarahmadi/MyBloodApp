@@ -12,24 +12,17 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
-    
+
     <materialDesign:Card UniformCornerRadius="20" Background="{DynamicResource MaterialDesignPaper}" Margin="25">
         <Grid>
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                    <GradientStop Offset="0" Color="Pink"/>
-                    <GradientStop Offset="1" Color="White"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <Button x:Name="MainVolunteer" Margin="30,300,220,300" Width="150" Height="150" Content="" BorderThickness="0" BorderBrush="Transparent" Background="#FFFF5050">
+            <Button x:Name="MainVolunteer" Margin="30,375,220,225" Width="150" Height="150" Content="" BorderThickness="0" BorderBrush="Transparent" Background="#FFFF5050">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <Image Source="\Assets\Donor.png"/>
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-            <Button x:Name="MainEvent" Margin="220,300,30,300" Width="150" Height="150" Content="Event" Click="MainEvent_Click" Background="#FFFF5050"  BorderThickness="2">
+            <Button x:Name="MainEvent" Margin="220,375,30,225" Width="150" Height="150" Content="Event" Click="MainEvent_Click" Background="#FFFF5050"  BorderThickness="2">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <Image Source="\Assets\DaftarEvent.png"/>
@@ -43,8 +36,19 @@
                     <Run Text="!"/>
                 </TextBlock>
             </Button>
-            <TextBlock HorizontalAlignment="Left" Height="48" Margin="38,470,0,0" TextWrapping="Wrap" Text="DAFTAR VOLUNTEERRER" VerticalAlignment="Top" Width="134" Background="Transparent" FontFamily="Montserrat Black" FontSize="20" TextAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" Height="54" Margin="247,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Background="Transparent" FontFamily="Montserrat Black" FontSize="20" TextAlignment="Center"><Run Text="DAFTAR"/><LineBreak/><Run Text="EVENT"/><LineBreak/><Run/></TextBlock>
+            <Button x:Name="MyEvent" Margin="30,197,30,403" Height="150"  Background="White">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="MY EVENT" Foreground="Black" FontSize="20" Margin="0,0,0,120" FontFamily="Montserrat"/>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <Button x:Name="ListEventWidget" Margin="30,551,30,79" Content="" BorderThickness="0" BorderBrush="Transparent" Background="#FFFF5050" RenderTransformOrigin="0.517,0.1" Height="120" >
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
         </Grid>
     </materialDesign:Card>
 </Window>

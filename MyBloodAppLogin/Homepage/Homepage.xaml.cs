@@ -23,5 +23,10 @@ namespace MyBloodAppLogin.Homepage
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

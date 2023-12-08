@@ -30,7 +30,7 @@ namespace MyBloodAppLogin
         private void NoAccount_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("Page1.xaml", UriKind.Relative));
-            mainFrame = Close;
+            //mainFrame = Close;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)

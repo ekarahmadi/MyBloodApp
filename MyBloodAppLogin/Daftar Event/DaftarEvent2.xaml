@@ -10,9 +10,8 @@
       Title="DaftarEvent">
 
     <Grid Background="White">
-        <Image x:Name="Logo" Margin="-4,11,338,729" Source="/LOGO.png"/>
+        <Image x:Name="Logo" Margin="-15,10,349,730" Source="\Assets\Logo.png"/>
         <TextBlock x:Name="judul" Margin="0,17,0,0" TextWrapping="Wrap" Text="Pendaftaran Kegiatan" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-
         <TextBlock TextWrapping="Wrap" Text="Verifikasi Berkas" FontFamily="Copperplate Gothic Light" FontSize="15
            " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,103,0,0"/>
         <TextBox x:Name="a" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,124,38,622" materialDesign:HintAssist.Hint="Upload Berkas yang Menunjukan Auntentikasi Acara" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
@@ -62,7 +61,7 @@
             </Menu>
 
         </StackPanel>
-        <TextBlock x:Name="judul_Copy" Margin="79,44,0,0" TextWrapping="Wrap" Text="Donor Darah" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="judul_Copy" Margin="96,44,0,0" TextWrapping="Wrap" Text="Donor Darah" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <CheckBox Content="Dengan Ini anda sebagai panitia event telah menyetujui" HorizontalAlignment="Left" Margin="38,488,0,0" VerticalAlignment="Top"/>
         <Label Content="Term of agreement yang ditetapkan oleh aplikasi" HorizontalAlignment="Left" Margin="57,502,0,0" VerticalAlignment="Top"/>
     </Grid>

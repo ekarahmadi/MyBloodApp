@@ -247,12 +247,12 @@
 
     <ImageBrush
         x:Key="close_def"
-        ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\shutdown_def.png"
+        ImageSource="\Assets\shutdown_def.png"
         Stretch="Uniform" />
 
     <ImageBrush
         x:Key="close_mo"
-        ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\shutdown_mo.png"
+        ImageSource="\Assets\shutdown_mo.png"
         Stretch="Uniform" />
 
     <Style x:Key="CloseBtnStyle" TargetType="{x:Type Button}">
@@ -302,12 +302,12 @@
 
     <ImageBrush
     x:Key="minimize_def"
-    ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\minimize_def.png"
+    ImageSource="\Assets\minimize_def.png"
     Stretch="Uniform" />
 
     <ImageBrush
     x:Key="minimize_mo"
-    ImageSource="C:\Users\ekara\source\repos\MyBloodAppLogin\MyBloodAppLogin\Assets\minimize_mo.png"
+    ImageSource="\Assets\minimize_mo.png"
     Stretch="Uniform" />
 
     <Style x:Key="MinimizeBtnStyle" TargetType="{x:Type Button}">
