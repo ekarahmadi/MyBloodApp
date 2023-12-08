@@ -33,7 +33,7 @@
                 BorderThickness="2"
                 FontFamily="Sitka Banner"
                 FontSize="18"
-                Style="{StaticResource MaterialDesignComboBox}" SelectionChanged="boxBloodType_SelectionChanged">
+                Style="{StaticResource MaterialDesignComboBox}">
                     <ComboBoxItem Content="   A+" />
                     <ComboBoxItem Content="   A-" />
                     <ComboBoxItem Content="   B+" />
@@ -43,7 +43,7 @@
                 </ComboBox>
                 <TextBox x:Name="txtTinggiBadan" TextWrapping="Wrap" Width="300" FontFamily="Sitka Banner" Height="55" FontSize="18" Margin="0,5,0,0" materialDesign:HintAssist.Hint="Tinggi Badan" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 <TextBox x:Name="txtBeratBadan" TextWrapping="Wrap" Width="300" FontFamily="Sitka Banner" Height="55" FontSize="18" Margin="0,5,0,0" materialDesign:HintAssist.Hint="Berat Badan" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-                <ComboBox x:Name="boxGender" Width="300" Height="50" Margin="0,5,0,5" FontFamily="Sitka Banner" materialDesign:HintAssist.Hint="    Jenis Kelamin" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignComboBox}" SelectionChanged="boxGender_SelectionChanged">
+                <ComboBox x:Name="boxGender" Width="300" Height="50" Margin="0,5,0,5" FontFamily="Sitka Banner" materialDesign:HintAssist.Hint="    Jenis Kelamin" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignComboBox}" >
                     <ComboBoxItem Content="Laki-Laki"/>
                     <ComboBoxItem Content="Perempuan"/>
                 </ComboBox>

@@ -13,7 +13,7 @@
         <Image x:Name="Logo" Margin="3,17,358,742" Source="/LOGO.png"/>
         <TextBox x:Name="Search" TextWrapping="Wrap" FontFamily="Sitka Banner" Height="55" FontSize="18" Margin="60,10,84,735" materialDesign:HintAssist.Hint="Cari Kota,Kabupaten/Kecamatan" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="Login" Content="Cari" Margin="335,10,10,735" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+        <Button x:Name="Login" Content="Cari" Margin="335,10,10,735" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" />
 
         <StackPanel Margin="0,745,-1,0" Background="#FF0000"
             Orientation="Horizontal" Height="55

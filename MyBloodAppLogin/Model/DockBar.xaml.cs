@@ -18,11 +18,13 @@ namespace MyBloodAppLogin.Model
     /// <summary>
     /// Interaction logic for DockBar.xaml
     /// </summary>
-    public partial class DockBar : UserControl
+    public partial class Dockbar : UserControl
     {
-        public DockBar()
+        public Dockbar()
         {
             InitializeComponent();
         }
+
+
     }
 }

@@ -22,7 +22,7 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-            <Button x:Name="MainEvent" Margin="220,375,30,225" Width="150" Height="150" Content="Event" Click="MainEvent_Click" Background="#FFFF5050"  BorderThickness="2">
+            <Button x:Name="MainEvent" Margin="220,375,30,225" Width="150" Height="150" Content="Event" Background="#FFFF5050"  BorderThickness="2">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <Image Source="\Assets\DaftarEvent.png"/>
@@ -49,10 +49,7 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-
-            <local:DockBar>
-            </local:DockBar>
-
+            <local:Dockbar/>
         </Grid>
     </materialDesign:Card>
 </Window>
