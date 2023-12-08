@@ -49,7 +49,6 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
-            <local:Dockbar/>
         </Grid>
     </materialDesign:Card>
 </Window>
