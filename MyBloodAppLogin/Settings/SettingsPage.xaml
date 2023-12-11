@@ -1,0 +1,38 @@
+﻿<Page x:Class="MyBloodAppLogin.Settings.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MyBloodAppLogin.Settings"
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="SettingsPage"
+      Background="{x:Null}"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      mc:Ignorable="d">
+
+    <materialDesign:Card
+        Margin="25"
+        Background="{DynamicResource MaterialDesignPaper}"
+        UniformCornerRadius="20">
+        <Grid>
+            <Ellipse x:Name="Foto_setting" Margin="10,43,278,601" RenderTransformOrigin="0.17,0.12">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button Content="LOG OUT" HorizontalAlignment="Center" Margin="0,472,0,198" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
+            <TextBlock Text="Brian Tirafi Aufauzan" Margin="138,66,30,657" RenderTransformOrigin="0.5,0.5" FontFamily="Montserrat" FontSize="22" Foreground="Black">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.31"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="1.495"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Grid>
+        
+    </materialDesign:Card>
+</Page>
