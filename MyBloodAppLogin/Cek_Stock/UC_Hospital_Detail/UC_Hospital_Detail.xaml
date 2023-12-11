@@ -6,6 +6,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Detail"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    
+             d:DesignHeight="600" d:DesignWidth="800">
+    <materialDesign:Card Margin="25" Background="{DynamicResource MaterialDesignPaper}" UniformCornerRadius="20">
+
+    </materialDesign:Card>
+
 </UserControl>
