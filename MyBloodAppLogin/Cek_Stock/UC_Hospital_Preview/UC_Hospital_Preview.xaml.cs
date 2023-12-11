@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyBloodAppLogin.Cek_Stock.CekStock_Admin
+namespace MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview
 {
     /// <summary>
-    /// Interaction logic for CekStock_AddData.xaml
+    /// Interaction logic for UC_Hospital_Preview.xaml
     /// </summary>
-    public partial class CekStock_AddData : Page
+    public partial class UC_Hospital_Preview : UserControl
     {
-        public CekStock_AddData()
+        public UC_Hospital_Preview()
         {
             InitializeComponent();
         }
