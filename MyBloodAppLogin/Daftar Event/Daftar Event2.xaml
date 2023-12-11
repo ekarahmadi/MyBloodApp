@@ -1,0 +1,68 @@
+﻿<Page x:Class="MyBloodAppLogin.Daftar_Event.DaftarEvent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MyBloodAppLogin.Daftar_Event"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="DaftarEvent">
+
+    <Grid Background="White">
+        <Image x:Name="Logo2" Margin="-15,10,349,730" Source="\Assets\Logo.png"/>
+        <TextBlock x:Name="judul2" Margin="0,17,0,0" TextWrapping="Wrap" Text="Pendaftaran Kegiatan" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Verifikasi Berkas" FontFamily="Copperplate Gothic Light" FontSize="15
+           " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,103,0,0"/>
+        <TextBox x:Name="a2" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,124,38,622" materialDesign:HintAssist.Hint="Upload Berkas yang Menunjukan Auntentikasi Acara" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+        <TextBlock TextWrapping="Wrap" Text="Poster Acara" FontFamily="Copperplate Gothic Light" FontSize="15
+   " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,193,0,0"/>
+        <TextBox x:Name="b2" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,214,38,532" materialDesign:HintAssist.Hint="Upload Poster yang Mewakili Event" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+        <TextBlock TextWrapping="Wrap" Text="Platform Informasi" FontFamily="Copperplate Gothic Light" FontSize="15
+" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,283,0,0"/>
+        <TextBox x:Name="c2" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,304,38,442" materialDesign:HintAssist.Hint="Platform untuk update Mengenai Event. Contoh: Instagram" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+        <TextBlock TextWrapping="Wrap" Text="Nama Akun" FontFamily="Copperplate Gothic Light" FontSize="15
+" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,373,0,0"/>
+        <TextBox x:Name="d2" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,394,38,352" materialDesign:HintAssist.Hint="Nama Akun Penyebaran Informasi" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+
+        <Button x:Name="Login2" Content="Daftarkan Event" Margin="38,579,39,166" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+
+        <Button x:Name="toa2" Content="Term of agreement" Margin="140,533,141,235" FontSize="12" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Click="Login_Click"/>
+
+        <StackPanel Margin="0,745,-1,0" Background="#FF0000"
+            Orientation="Horizontal" Height="55
+            ">
+            <Menu Height="45" Width="390" Margin="5 5 5 5" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignMenu}" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True" UseLayoutRounding="False" VerticalContentAlignment="Center" >
+                <Menu.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Menu.RenderTransform>
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <MenuItem Header="Home" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </MenuItem>
+
+                <MenuItem Header="Event" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </MenuItem>
+
+                <MenuItem Header="Account" HorizontalAlignment="Center" VerticalAlignment="Center">
+                </MenuItem>
+            </Menu>
+
+        </StackPanel>
+        <TextBlock x:Name="judul_Copy2" Margin="96,44,0,0" TextWrapping="Wrap" Text="Donor Darah" FontFamily="Copperplate Gothic Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <CheckBox Content="Dengan Ini anda sebagai panitia event telah menyetujui" HorizontalAlignment="Left" Margin="38,488,0,0" VerticalAlignment="Top"/>
+        <Label Content="Term of agreement yang ditetapkan oleh aplikasi" HorizontalAlignment="Left" Margin="57,502,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
