@@ -16,20 +16,22 @@
         Background="{DynamicResource MaterialDesignPaper}"
         UniformCornerRadius="20">
         <Grid>
+            <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,10,10,522"/>
             <Ellipse x:Name="Foto_Setting" Margin="10,43,278,601" RenderTransformOrigin="0.17,0.12">
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
-                    </Ellipse.Fill>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
+                </Ellipse.Fill>
             </Ellipse>
-            <Button Content="LOG OUT" HorizontalAlignment="Center" Margin="0,472,0,198" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
             <TextBlock x:Name="Nama_Setting" Text="Brian Tirafi Aufauzan" Margin="138,66,30,657" RenderTransformOrigin="0.5,0.5" FontFamily="Montserrat" FontSize="22" Foreground="Black"/>
             <TextBlock x:Name="Status_Setting" Text="L / O" FontSize="22" Foreground="Black" Margin="230,104,122,615"/>
             <TextBlock x:Name="Email_Setting" Text="briantirafiaufauzan@gmail.com" FontSize="15" Foreground="Black" Margin="57,166,105,559" FontFamily="Montserrat">
-                 <TextBlock.RenderTransform>
-                      <ScaleTransform ScaleX="1.2" ScaleY="1" />
-                 </TextBlock.RenderTransform>
-                </TextBlock>
+                <TextBlock.RenderTransform>
+                    <ScaleTransform ScaleX="1.2" ScaleY="1" />
+                </TextBlock.RenderTransform>
+            </TextBlock>
             <Line X1="135" Y1="100" X2="375" Y2="100" Stroke="Black" StrokeThickness="2" />
+            <Button Content="LOG OUT" HorizontalAlignment="Center" Margin="0,472,0,198" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
+            
         </Grid>
 
     </materialDesign:Card>
