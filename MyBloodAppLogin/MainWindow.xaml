@@ -127,14 +127,14 @@
 
             <TextBox
                 x:Name="Copyright"
-                Width="216"
+                Width="255"
                 Height="22"
                 Margin="0,20,0,0"
                 HorizontalAlignment="Center"
                 BorderThickness="0,0,0,0"
                 FontFamily="Sitka Banner"
                 FontWeight="Bold"
-                Text="© MyBlood App Team for OOP Class DTETI"
+                Text="© Kantong Darah App Team for OOP Class DTETI"
                 TextAlignment="Center"
                 TextWrapping="Wrap" />
 
