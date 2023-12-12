@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace MyBloodAppLogin.Daftar_Event
 {
     /// <summary>
-    /// Interaction logic for DaftarEvent.xaml
+    /// Interaction logic for Daftar_Event1.xaml
     /// </summary>
-    public partial class DaftarEvent : Page
+    public partial class Daftar_Event1 : Page
     {
-        public DaftarEvent()
+        public Daftar_Event1()
         {
             InitializeComponent();
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void InitializeComponent()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

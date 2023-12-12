@@ -45,7 +45,7 @@
 " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,578,0,0"/>
         <TextBox x:Name="h" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="18" Margin="38,593,37,172" materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="Login" Content="Selanjutnya" Margin="38,656,39,89" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+        <Button x:Name="Login" Content="Selanjutnya" Margin="38,656,39,89" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" />
 
         <StackPanel Margin="0,745,-1,0" Background="#FF0000"
             Orientation="Horizontal" Height="55

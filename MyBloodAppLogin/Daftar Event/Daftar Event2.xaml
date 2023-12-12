@@ -1,4 +1,4 @@
-﻿<Page x:Class="MyBloodAppLogin.Daftar_Event.DaftarEvent"
+﻿<Page x:Class="MyBloodAppLogin.Daftar_Event.DaftarEvent2"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -28,9 +28,9 @@
 " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,373,0,0"/>
         <TextBox x:Name="d2" TextWrapping="Wrap" FontFamily="Sitka Banner" FontSize="12" Margin="38,394,38,352" materialDesign:HintAssist.Hint="Nama Akun Penyebaran Informasi" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
 
-        <Button x:Name="Login2" Content="Daftarkan Event" Margin="38,579,39,166" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55" Click="Login_Click"/>
+        <Button x:Name="Login2" Content="Daftarkan Event" Margin="38,579,39,166" FontSize="20" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Height="55"/>
 
-        <Button x:Name="toa2" Content="Term of agreement" Margin="140,533,141,235" FontSize="12" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" Click="Login_Click"/>
+        <Button x:Name="toa2" Content="Term of agreement" Margin="140,533,141,235" FontSize="12" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ButtonAssist.CornerRadius="15" />
 
         <StackPanel Margin="0,745,-1,0" Background="#FF0000"
             Orientation="Horizontal" Height="55

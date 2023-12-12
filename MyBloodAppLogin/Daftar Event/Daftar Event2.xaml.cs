@@ -24,5 +24,10 @@ namespace MyBloodAppLogin.Daftar_Event
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
