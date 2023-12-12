@@ -13,8 +13,8 @@
     mc:Ignorable="d">
     <Grid Background="{DynamicResource MaterialDesignPaper}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="227*"/>
-            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="214*"/>
         </Grid.ColumnDefinitions>
         <StackPanel
             Margin="-9,-9,10,0"
@@ -22,7 +22,7 @@
             ScrollViewer.CanContentScroll="True"
             ScrollViewer.HorizontalScrollBarVisibility="Auto"
             ScrollViewer.VerticalScrollBarVisibility="Auto"
-            UseLayoutRounding="False" Grid.ColumnSpan="2">
+            UseLayoutRounding="False" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
 
             <!--  Tambahkan Frame dengan nama secFrame  -->
             <Frame x:Name="secFrame" NavigationUIVisibility="Hidden" />
