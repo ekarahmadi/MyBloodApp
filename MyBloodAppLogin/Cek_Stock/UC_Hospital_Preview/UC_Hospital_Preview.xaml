@@ -34,7 +34,7 @@
 
             <!--Alamat Rumah Sakit-->
             <Image x:Name="___Assets_img_maps_png" Grid.Column="1" Margin="31,59,531,103" Source="/Assets/img_maps.png" Stretch="Fill" Height="38"/>
-            <TextBlock x:Name="Hospital_Address" Text="{Binding Hospital_Address}" Grid.Column="1" Margin="73,65,45,104" d:LayoutOverrides="HorizontalAlignment" FontFamily="Dubai Light" FontSize="16"/>
+            <TextBlock x:Name="Hospital_Address" Text="{Binding HospitalAddress}" Grid.Column="1" Margin="73,65,45,104" d:LayoutOverrides="HorizontalAlignment" FontFamily="Dubai Light" FontSize="16"/>
 
             <!--Jam Buka-->
             <Image x:Name="Icon_Hospital_Open" Grid.Column="1" Margin="34,108,535,62" Source="/Assets/img_clock.png" Stretch="Fill"/>

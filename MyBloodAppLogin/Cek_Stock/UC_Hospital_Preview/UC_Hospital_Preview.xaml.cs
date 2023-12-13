@@ -23,6 +23,14 @@ namespace MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview
         public UC_Hospital_Preview()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
+        public string HospitalName (get; set);
+        public string HospitalAddress (get; set);
+        public string HospitalOpen (get; set);
+        public string HospitalTelephone (get; set);
+        public string HospitalPicture (get; set);
+
+
     }
 }

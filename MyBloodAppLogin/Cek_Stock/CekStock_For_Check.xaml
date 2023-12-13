@@ -6,10 +6,13 @@
     xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc ="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
+    
     Title="CekStock_For_Check"
     d:DesignHeight="800"
     d:DesignWidth="450"
     mc:Ignorable="d">
+    
     <materialDesign:Card
         Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
@@ -20,8 +23,29 @@
                 <RowDefinition Height="600" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
+            
+            <!--Header Menu-->
+            <Image x:Name="___LOGO_png" Margin="21,20,332,15" Source="/LOGO.png" Stretch="Fill" Width="47"/>
 
+            <!--Hospital List-->
+            <ListView Grid.Row="1">
+                <ListView>
 
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/> 
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    
+            
+                    
+                </ListView>
+            </ListView>
+
+            <!--DockBar-->
+            
+                
         </Grid>
     </materialDesign:Card>
 </Page>
