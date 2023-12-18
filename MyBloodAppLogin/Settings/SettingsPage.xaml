@@ -15,23 +15,251 @@
         Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
         UniformCornerRadius="20">
-        <Grid>
-            <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,10,10,522"/>
-            <Ellipse x:Name="Foto_Setting" Margin="10,43,278,601" RenderTransformOrigin="0.17,0.12">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
-                </Ellipse.Fill>
-            </Ellipse>
-            <TextBlock x:Name="Nama_Setting" Text="Brian Tirafi Aufauzan" Margin="138,66,30,657" RenderTransformOrigin="0.5,0.5" FontFamily="Montserrat" FontSize="22" Foreground="Black"/>
-            <TextBlock x:Name="Status_Setting" Text="L / O" FontSize="22" Foreground="Black" Margin="230,104,122,615"/>
-            <TextBlock x:Name="Email_Setting" Text="briantirafiaufauzan@gmail.com" FontSize="15" Foreground="Black" Margin="57,166,105,559" FontFamily="Montserrat">
-                <TextBlock.RenderTransform>
-                    <ScaleTransform ScaleX="1.2" ScaleY="1" />
-                </TextBlock.RenderTransform>
-            </TextBlock>
-            <Line X1="135" Y1="100" X2="375" Y2="100" Stroke="Black" StrokeThickness="2" />
-            <Button Content="LOG OUT" HorizontalAlignment="Center" Margin="0,472,0,198" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
-            
+
+        <Grid Grid.Row="1" Height="750">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="700" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,40,10,522"/>
+                <Ellipse x:Name="Foto_Setting" Margin="25,46,278,557" RenderTransformOrigin="0.17,0.12">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock Grid.Row="0" x:Name="Nama_Setting" Text="Brian Tirafi Aufauzan" Margin="138,66,30,609" RenderTransformOrigin="0.5,0.5" FontFamily="Montserrat" FontSize="22" Foreground="Black"/>
+                <TextBlock Grid.Row="0" x:Name="Status_Setting" Text="L / O" FontSize="22" Foreground="Black" Margin="230,104,122,566"/>
+                <TextBlock Grid.Row="0" x:Name="Email_Setting" Text="briantirafiaufauzan@gmail.com" FontSize="15" Foreground="Black" Margin="57,150,105,512" FontFamily="Montserrat">
+                    <TextBlock.RenderTransform>
+                        <ScaleTransform ScaleX="1.2" ScaleY="1" />
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <Line X1="135" Y1="100" X2="375" Y2="100" Stroke="Black" StrokeThickness="2" />
+                <Button Grid.Row="0" Content="LOG OUT" HorizontalAlignment="Center" Margin="0,470,0,150" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
+
+            </Grid>
+
+            <!--  Dock Bar Menu  -->
+            <Grid
+Grid.Row="2"
+Grid.Column="4"
+Height="50"
+Width="400"
+    Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="303"/>
+                    <ColumnDefinition Width="97"/>
+                </Grid.ColumnDefinitions>
+
+                <Border
+    Grid.Column="0"
+    Grid.ColumnSpan="3"
+    Background="DarkRed"
+    CornerRadius="0,0,0,0" />
+
+                <Grid Grid.ColumnSpan="3">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="5" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--  News  -->
+                    <Button
+        x:Name="News"
+        Grid.Column="1"
+        Width="35"
+        Height="35"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=News}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="News" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Daftar Event  -->
+                    <Button
+        x:Name="Event"
+        Grid.Column="2"
+        Width="35"
+        Height="35"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="\Assets\event_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=Event}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Event" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Home  -->
+                    <Button
+        x:Name="Home"
+        Grid.Column="3"
+        Width="35"
+        Height="35"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="\Assets\home_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=Home, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=Home}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Home" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+
+                    </Button>
+
+                    <!--  Account  -->
+                    <Button
+        x:Name="Account"
+        Grid.Column="4"
+        Width="35"
+        Height="35"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                        </Button.Background>
+
+                        <Popup
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=Account, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=Account}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Account" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+                    </Button>
+
+                    <!--  Setting  -->
+                    <Button
+        x:Name="Setting"
+        Grid.Column="5"
+        Width="35"
+        Height="35"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{StaticResource DockBtnStyle}">
+
+                        <Button.Background>
+                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                        </Button.Background>
+                        <Popup
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=Setting, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=Setting}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
+
+                            <Grid>
+
+                                <Border Style="{StaticResource border}">
+
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Setting" />
+
+                                </Border>
+
+                                <Path Style="{StaticResource ArrowPath}" />
+
+                            </Grid>
+
+                        </Popup>
+                    </Button>
+
+                </Grid>
+            </Grid>
         </Grid>
 
     </materialDesign:Card>
