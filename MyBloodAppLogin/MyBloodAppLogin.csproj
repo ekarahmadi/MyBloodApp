@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Model\Dockbar.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
@@ -26,6 +30,7 @@
   <ItemGroup>
     <Resource Include="account-25 1.png" />
     <Resource Include="LOGO.png" />
+    <Resource Include="Model\Dockbar.xaml" />
   </ItemGroup>
 
 </Project>
