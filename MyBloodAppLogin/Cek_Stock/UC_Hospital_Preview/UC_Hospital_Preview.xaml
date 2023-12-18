@@ -1,48 +1,100 @@
-﻿<UserControl x:Class="MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview.UC_Hospital_Preview"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
-             mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="800">
-    <materialDesign:Card  Background="{DynamicResource PrimaryHueDarkForegroundBrush}" UniformCornerRadius="20" BorderBrush="#FF532E2E">
-        <Grid Grid.Column="4" Grid.Row="0" HorizontalAlignment="Center" Width="800">
+﻿<UserControl
+    x:Class="MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview.UC_Hospital_Preview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="200"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <materialDesign:Card
+        Background="{DynamicResource PrimaryHueDarkForegroundBrush}"
+        BorderBrush="#FF532E2E"
+        UniformCornerRadius="20">
+        <Grid
+            Grid.Row="0"
+            Grid.Column="4"
+            Width="800"
+            HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="600"/>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="600" />
             </Grid.ColumnDefinitions>
 
-            <!--Foto RS-->
-            <Image 
-                x:Name = "Foto_RS"
-                Grid.Column = "0"
-                Width = "180"
-                Margin = "10 10 10 10" 
-            >
+            <!--  Foto RS  -->
+            <Image
+                x:Name="Foto_RS"
+                Grid.Column="0"
+                Width="180"
+                Margin="10,10,10,10">
                 <Image.OpacityMask>
-                    <ImageBrush ImageSource = "{Binding HospitalPicture}"/>
+                    <ImageBrush ImageSource="{Binding HospitalPicture}" />
                 </Image.OpacityMask>
 
             </Image>
 
-            <!--Nama Rumah Sakit-->
-            <Label x:Name="Hospital_Name"
-                   Grid.Column="1"
-                   Margin="35,23,0,0" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding HospitalName}" FontFamily="Copperplate Gothic Bold" FontSize="20"/>
+            <!--  Nama Rumah Sakit  -->
+            <Label
+                x:Name="Text_Hospital_Name"
+                Grid.Column="1"
+                Height="35"
+                Margin="35,23,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="{Binding HospitalName}"
+                FontFamily="Copperplate Gothic Bold"
+                FontSize="20" />
 
-            <!--Alamat Rumah Sakit-->
-            <Image x:Name="___Assets_img_maps_png" Grid.Column="1" Margin="31,59,531,103" Source="/Assets/img_maps.png" Stretch="Fill" Height="38"/>
-            <TextBlock x:Name="Hospital_Address" Text="{Binding HospitalAddress}" Grid.Column="1" Margin="73,65,45,104" d:LayoutOverrides="HorizontalAlignment" FontFamily="Dubai Light" FontSize="16"/>
+            <!--  Alamat Rumah Sakit  -->
+            <Image
+                x:Name="Icon_Hospital_Maps"
+                Grid.Column="1"
+                Height="38"
+                Margin="31,59,531,103"
+                Source="/Assets/img_maps.png"
+                Stretch="Fill" />
+            <TextBlock
+                x:Name="Text_Hospital_Address"
+                Grid.Column="1"
+                Margin="73,65,45,104"
+                FontFamily="Dubai Light"
+                FontSize="16"
+                Text="{Binding HospitalAddress}"
+                d:LayoutOverrides="HorizontalAlignment" />
 
-            <!--Jam Buka-->
-            <Image x:Name="Icon_Hospital_Open" Grid.Column="1" Margin="34,108,535,62" Source="/Assets/img_clock.png" Stretch="Fill"/>
-            <TextBlock x:Name="TextBlock_Hospital_Open" Text="{Binding HospitalOpem}" Grid.Column="1" Margin="73,111,45,58" d:LayoutOverrides="HorizontalAlignment" FontFamily="Dubai Light" FontSize="16"/>
+            <!--  Jam Buka  -->
+            <Image
+                x:Name="Icon_Hospital_Open"
+                Grid.Column="1"
+                Margin="34,108,535,62"
+                Source="/Assets/img_clock.png"
+                Stretch="Fill" />
+            <TextBlock
+                x:Name="Text_Hospital_Open"
+                Grid.Column="1"
+                Margin="73,111,45,58"
+                FontFamily="Dubai Light"
+                FontSize="16"
+                Text="{Binding HospitalOpem}"
+                d:LayoutOverrides="HorizontalAlignment" />
 
-            <!--Telepon-->
-            <Image x:Name="Icon_Hospital_Telephone" Grid.Column="1" Margin="34,150,534,18" Source="/Assets/img_telepon.png" Stretch="Fill"/>
-            <TextBlock x:Name="Text_Hospital_Telephone" Text="{Binding HospitalTelephone}" Grid.Column="1" Margin="73,153,45,16" d:LayoutOverrides="HorizontalAlignment" FontFamily="Dubai Light" FontSize="16"/>
+            <!--  Telepon  -->
+            <Image
+                x:Name="Icon_Hospital_Telephone"
+                Grid.Column="1"
+                Margin="34,150,534,18"
+                Source="/Assets/img_telepon.png"
+                Stretch="Fill" />
+            <TextBlock
+                x:Name="Text_Hospital_Telephone"
+                Grid.Column="1"
+                Margin="73,153,45,16"
+                FontFamily="Dubai Light"
+                FontSize="16"
+                Text="{Binding HospitalTelephone}"
+                d:LayoutOverrides="HorizontalAlignment" />
 
 
 
