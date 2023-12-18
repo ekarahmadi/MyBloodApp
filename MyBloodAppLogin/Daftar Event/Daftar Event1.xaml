@@ -68,11 +68,11 @@
                     VerticalAlignment="Top"
                     FontFamily="Copperplate Gothic Light"
                     FontSize="15            "
-                    Text="Nama Organiasi"
+                    Text="Nama Organisasi"
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="a"
-                    Margin="38,124,38,641"
+                    Margin="38,124,38,500"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -91,7 +91,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="b"
-                    Margin="38,191,37,574"
+                    Margin="38,191,37,433"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -110,7 +110,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="c"
-                    Margin="38,258,38,507"
+                    Margin="38,258,38,366"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -129,7 +129,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="d"
-                    Margin="38,325,37,440"
+                    Margin="38,325,37,299"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -148,7 +148,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="e"
-                    Margin="38,392,37,373"
+                    Margin="38,392,37,232"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -167,7 +167,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="f"
-                    Margin="38,459,38,306"
+                    Margin="38,459,38,160"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -186,7 +186,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="g"
-                    Margin="38,526,37,239"
+                    Margin="38,526,37,92"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
@@ -205,7 +205,7 @@
                     TextWrapping="Wrap" />
                 <TextBox
                     x:Name="h"
-                    Margin="38,593,37,172"
+                    Margin="38,593,37,30"
                     materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
                     BorderBrush="{DynamicResource MaterialDesignDivider}"
                     BorderThickness="2"
