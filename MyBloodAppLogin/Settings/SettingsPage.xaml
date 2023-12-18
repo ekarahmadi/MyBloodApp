@@ -53,7 +53,7 @@
             </Grid>
 
             <Grid Grid.Row="2">
-                <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,5,10,489" Height="200"/>
+                <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,5,10,318"/>
                 <Ellipse x:Name="Foto_Setting" Margin="10,75,278,400" RenderTransformOrigin="0.17,0.12">
                     <Ellipse.Fill>
                         <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
