@@ -34,6 +34,11 @@ namespace MyBloodAppLogin.Cek_Stock
         {
 
         }
+
+        private void UC_Hospital_Preview_Loaded_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 

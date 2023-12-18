@@ -64,7 +64,7 @@
             <!--Hospital List-->
             <ListView Grid.Row="2">
                 <ListView>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
+                    <uc:UC_Hospital_Preview Width="368" Height="100" Loaded="UC_Hospital_Preview_Loaded_2"/>
                     <uc:UC_Hospital_Preview Width="368" Height="100"/>
                     <uc:UC_Hospital_Preview Width="368" Height="100"/>
                     <uc:UC_Hospital_Preview Width="368" Height="100"/>
