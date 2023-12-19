@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MyBloodAppLogin.Daftar_Voulenteer.List_Event;
+using MyBloodAppLogin.Daftar_Voulenteer;
 
 namespace MyBloodAppLogin.Settings
 {

@@ -28,12 +28,18 @@ namespace MyBloodAppLogin.Homepage
 
         private void MainVolunteer_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (homepageFrame.NavigationService != null)
+            {
+                homepageFrame.NavigationService.Navigate(new Uri("List_Event.xaml", UriKind.Relative));
+            }
         }
 
         private void MainEvent_Click(object sender, RoutedEventArgs e)
         {
-
+            if (homepageFrame.NavigationService != null)
+            {
+                homepageFrame.NavigationService.Navigate(new Uri("List_Event.xaml", UriKind.Relative));
+            }
         }
     }
 }
