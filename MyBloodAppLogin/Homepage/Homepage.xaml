@@ -44,6 +44,9 @@
                         </DataTemplate>
                     </Button.ContentTemplate>
                 </Button>
+
+                <TextBlock Text="DAFTAR VOLUNTEER" FontSize="18" FontFamily="Montserrat Bold" Margin="30,505,220,150" TextWrapping="Wrap" TextAlignment="Center"/>
+
                 <Button
                 x:Name="MainEvent"
                 Width="150"
@@ -58,6 +61,9 @@
                         </DataTemplate>
                     </Button.ContentTemplate>
                 </Button>
+
+                <TextBlock FontSize="18" FontFamily="Montserrat Bold" Margin="220,505,30,150" TextWrapping="Wrap" TextAlignment="Center"><Run Text="DAFTAR "/><LineBreak/><Run Text="EVENT"/></TextBlock>
+
                 <Button
                 Width="400"
                 Height="163"
@@ -65,7 +71,8 @@
                 VerticalAlignment="Top"
                 FontFamily="Montserrat"
                 FontSize="23"
-                TextBlock.TextAlignment="Center">
+                Background="DarkRed"
+                TextBlock.TextAlignment="Center" Click="Button_Click_1">
                     <TextBlock FontSize="30">
                     <Run Text="Halo," />
                     <Run Text="BRIAN" TextDecorations="Underline" />
@@ -91,12 +98,12 @@
                 <Button
                 x:Name="ListEventWidget"
                 Height="120"
-                Margin="30,574,30,16"
+                Margin="30,560,30,20"
                 Background="#FFFF5050"
                 BorderBrush="Transparent"
                 BorderThickness="0"
                 Content=""
-                RenderTransformOrigin="0.517,0.1">
+                RenderTransformOrigin="0.517,0.1" Click="ListEventWidget_Click">
                     <Button.ContentTemplate>
                         <DataTemplate />
                     </Button.ContentTemplate>
