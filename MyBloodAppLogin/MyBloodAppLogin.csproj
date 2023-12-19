@@ -35,13 +35,4 @@
     <Resource Include="Model\Dockbar.xaml" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Cek_Stock\CekStock_For_Detail3.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Cek_Stock\CekStock_For_Detail2.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
 </Project>
