@@ -69,7 +69,8 @@
                         <RowDefinition Height="188"/>
                     </Grid.RowDefinitions>
 
-                    <materialDesign:Card Margin="15" Background="DarkRed" UniformCornerRadius="20">
+                    <!--Rumah Sakit Dr. Sardjito-->
+                    <materialDesign:Card Grid.Row="0" Margin="15" Background="DarkRed" UniformCornerRadius="20">
                         <Grid Grid.Column="2">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="130"/>
@@ -114,8 +115,115 @@
                                     </TextBlock>
                                     <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
                                     <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 631190" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit dr. Sardjito" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit dr. Sardjito" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
 
+                                </Grid>
+
+                            </Grid>
+                        </Grid>
+                    </materialDesign:Card>
+
+                    <!--Rumah Sakit RSA UGM-->
+                    <materialDesign:Card Grid.Row="1" Margin="15" Background="DarkRed" UniformCornerRadius="20">
+                        <Grid Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="210"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Foto Profile-->
+                            <Image Grid.Column="0" x:Name="RSA_Square" Margin="4,4,0,2" Source="/Assets/RSA_Square.png" Stretch="Fill" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="126"/>
+
+                            <!--Icon-->
+                            <Grid Grid.Column="1">
+                                <Grid Grid.Row="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Icon-Icon-->
+                                    <Image Grid.Row="1" Source="/Assets/img_maps.png"/>
+                                    <Image Grid.Row="2" Source="/Assets/img_clock.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
+                                    <Image Grid.Row="3" Source="/Assets/img_telepon.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
+                                </Grid>
+                            </Grid>
+
+                            <!--Data RS-->
+                            <Grid Grid.Column="2">
+                                <Grid Grid.Row="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!--Data-->
+                                    <TextBlock Grid.Row="1" x:Name="AlamatRSA" Margin="0,4,0,3" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300" Foreground="White">
+                                        <Run>Jl. Kabupaten, Trihanggo </Run>
+                                        <LineBreak/>
+                                        <Run>Gamping, Sleman, DIY 55291 </Run>
+                                    </TextBlock>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="OpenRSA" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TeleponRSA" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
+
+                                </Grid>
+
+                            </Grid>
+                        </Grid>
+                    </materialDesign:Card>
+
+                    <!--Rumah Sakit RSGM dr. Soedomo-->
+                    <materialDesign:Card Grid.Row="2" Margin="15" Background="DarkRed" UniformCornerRadius="20">
+                        <Grid Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="210"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Foto Profile-->
+                            <Image Grid.Column="0" x:Name="RSGM_Square" Margin="4,4,0,2" Source="/Assets/RSGM_Square.png" Stretch="Fill" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="126"/>
+
+                            <!--Icon-->
+                            <Grid Grid.Column="1">
+                                <Grid Grid.Row="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Icon-Icon-->
+                                    <Image Grid.Row="1" Source="/Assets/img_maps.png"/>
+                                    <Image Grid.Row="2" Source="/Assets/img_clock.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
+                                    <Image Grid.Row="3" Source="/Assets/img_telepon.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
+                                </Grid>
+                            </Grid>
+
+                            <!--Data RS-->
+                            <Grid Grid.Column="2">
+                                <Grid Grid.Row="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="39.5"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!--Data-->
+                                    <TextBlock Grid.Row="1" x:Name="AlamatRSGM" Margin="0,4,0,3" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300" Foreground="White">
+                    <Run>Jl. Denta Sekip Utara No.1, Sendowo,  </Run>
+                    <LineBreak/>
+                    <Run> Sinduadi, Mlati, Sleman, DIY 55281</Run>
+                                    </TextBlock>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="OpenRSGM" Text="08.00 - 20.00" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TeleponRSGM" Text="(0274) 55312" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="RSGM dr. Soedomo UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
 
                                 </Grid>
 
