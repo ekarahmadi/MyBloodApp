@@ -75,7 +75,7 @@
                     <Image x:Name="Assets_Sardjito_png" Source="/Assets/Sardjito.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
 
                     <!--Data Rumah Sakit-->
-                    <Grid Grid.Row="1">
+                    <Grid Grid.Row="1" Background="#7F8B0000">
                         <Grid Grid.Row="3" Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"/>

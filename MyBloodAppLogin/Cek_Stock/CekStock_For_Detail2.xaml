@@ -75,7 +75,7 @@
                     <Image x:Name="___Assets_Sardjito_png" Source="/Assets/RSA.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
                     
                     <!--Data Rumah Sakit-->
-                    <Grid Grid.Row="1">
+                    <Grid Grid.Row="1" Background="#7F8B0000">
                         <Grid Grid.Row="3" Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"/>
@@ -102,9 +102,9 @@
                                 <Run>Kabupaten Sleman, Daerah Istimewa Yogyakarta 552911</Run>
                                 </Hyperlink>
                             </TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
-                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF"/>
 
                             <!-- Data Jenis Darah -->
                             <TextBlock Grid.Row="0" Grid.Column="1" x:Name="DataGoldarA" Text="{Binding GoldarA}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>

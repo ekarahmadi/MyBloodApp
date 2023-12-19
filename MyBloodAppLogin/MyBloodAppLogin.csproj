@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Remove="account-25 1.png" />
-    <None Remove="Cek_Stock\Sardjito_Square.png" />
     <None Remove="LOGO.png" />
   </ItemGroup>
 
@@ -34,7 +33,6 @@
 
   <ItemGroup>
     <Resource Include="account-25 1.png" />
-    <Resource Include="Cek_Stock\Sardjito_Square.png" />
     <Resource Include="LOGO.png" />
     <Resource Include="Model\Dockbar.xaml" />
   </ItemGroup>
