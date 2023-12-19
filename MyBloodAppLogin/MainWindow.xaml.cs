@@ -81,6 +81,11 @@ namespace MyBloodAppLogin
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void txtEmailAddress_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 }

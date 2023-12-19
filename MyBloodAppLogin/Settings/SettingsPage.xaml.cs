@@ -24,5 +24,10 @@ namespace MyBloodAppLogin.Settings
         {
             InitializeComponent();
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
