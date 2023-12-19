@@ -72,7 +72,7 @@
 
                     <!--Gambar-->
 
-                    <Image x:Name="___Assets_Sardjito_png" Source="/Assets/Sardjito.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
+                    <Image x:Name="___Assets_Sardjito_png" Source="/Assets/RSA.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
                     
                     <!--Data Rumah Sakit-->
                     <Grid Grid.Row="1">
@@ -95,10 +95,23 @@
                             <Image Grid.Row="3" Source="/Assets/img_telepon.png" VerticalAlignment="Center" Margin="24,0,-21,0" d:LayoutOverrides="Width" Height="46"/>
 
                             <!--Data-->
-                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="Location" Text="Alamat RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="Jam Buka RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="Telepon RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
-                            <Label Grid.Row="0" Grid.Column="1" Content="Nama Rumah Sakit" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Margin="30,11,0,11" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300">
+                                <Hyperlink NavigateUri="https://maps.app.goo.gl/JY7mW5GzyiXCJmPj8?g_st=i" RequestNavigate="Hyperlink_RequestNavigate">
+                                <Run>Jl. Kabupaten, Kranggahan I, Trihanggo, Kec. Gamping,</Run>
+                                <LineBreak/>
+                                <Run>Kabupaten Sleman, Daerah Istimewa Yogyakarta 552911</Run>
+                                </Hyperlink>
+                            </TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+
+                            <!-- Data Jenis Darah -->
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="DataGoldarA" Text="{Binding GoldarA}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DataGoldarB" Text="{Binding GoldarB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="DataGoldarO" Text="{Binding GoldarO}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="DataGoldarAB" Text="{Binding GoldarAB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="4" Grid.Column="1" x:Name="DataGoldarTotal" Text="{Binding GoldarTotal}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
                         </Grid>
                     </Grid>
 

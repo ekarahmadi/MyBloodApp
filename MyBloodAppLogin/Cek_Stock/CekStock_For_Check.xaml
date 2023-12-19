@@ -3,10 +3,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:uc ="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
+    xmlns:local ="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
     
     Title="CekStock_For_Check"
     d:DesignHeight="800"
@@ -62,16 +61,26 @@
             </Grid>
 
             <!--Hospital List-->
-            <ListView Grid.Row="2">
-                <ListView>
-                    <uc:UC_Hospital_Preview Width="368" Height="100" Loaded="UC_Hospital_Preview_Loaded_2"/>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
-                    <uc:UC_Hospital_Preview Width="368" Height="100"/>
-                </ListView>
-            </ListView>
+            <Grid Grid.Row="2">
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="188"/>
+                        <RowDefinition Height="188"/>
+                        <RowDefinition Height="188"/>
+                    </Grid.RowDefinitions>
+
+                    <materialDesign:Card Margin="15" Background="AntiqueWhite" UniformCornerRadius="20">
+                        <Grid Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="210"/>
+                            </Grid.ColumnDefinitions>
+                        
+                        </Grid>
+                    </materialDesign:Card>
+                </Grid>
+            </Grid>
 
             <!--  Dock Bar Menu  -->
             <Grid
