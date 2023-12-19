@@ -73,7 +73,7 @@
                     <!--Gambar-->
 
                     <Image x:Name="___Assets_Sardjito_png" Source="/Assets/RSA.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
-                    
+
                     <!--Data Rumah Sakit-->
                     <Grid Grid.Row="1" Background="#7F8B0000">
                         <Grid Grid.Row="3" Grid.Column="1">
@@ -326,11 +326,11 @@
                     <Button
                     x:Name="Setting"
                     Grid.Column="5"
-                    Width="35"
-                    Height="35"
+                    Width="36"
+                    Height="34"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Style="{StaticResource DockBtnStyle}">
+                    VerticalAlignment="Bottom"
+                    Style="{StaticResource DockBtnStyle}" Margin="0,0,0,8">
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />

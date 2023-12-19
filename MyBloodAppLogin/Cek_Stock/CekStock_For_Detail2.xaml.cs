@@ -18,11 +18,15 @@ namespace MyBloodAppLogin.Cek_Stock
     /// <summary>
     /// Interaction logic for CekStock_For_Detail.xaml
     /// </summary>
-    public partial class CekStock_For_Detail : Page
+    public partial class CekStock_For_Detail2 : Page
     {
-        public CekStock_For_Detail()
+        public CekStock_For_Detail2()
         {
             InitializeComponent();
+        }
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }
