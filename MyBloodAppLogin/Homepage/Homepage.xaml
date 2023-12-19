@@ -37,7 +37,7 @@
                 Background="#FFFF5050"
                 BorderBrush="Transparent"
                 BorderThickness="0"
-                Content="">
+                Content="" Click="MainVolunteer_Click">
                     <Button.ContentTemplate>
                         <DataTemplate>
                             <Image Source="\Assets\Donor.png" />
@@ -54,7 +54,7 @@
                 Margin="220,350,30,200"
                 Background="#FFFF5050"
                 BorderThickness="2"
-                Content="Event">
+                Content="Event" Click="MainEvent_Click">
                     <Button.ContentTemplate>
                         <DataTemplate>
                             <Image Source="\Assets\DaftarEvent.png" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyBloodAppLogin.Daftar_Voulenteer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MyBloodAppLogin.Homepage
@@ -24,6 +26,14 @@ namespace MyBloodAppLogin.Homepage
             InitializeComponent();
         }
 
-       
+        private void MainVolunteer_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void MainEvent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

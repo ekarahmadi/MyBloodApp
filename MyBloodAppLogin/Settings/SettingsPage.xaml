@@ -249,11 +249,11 @@
                     <Button
                         x:Name="Setting"
                         Grid.Column="5"
-                        Width="35"
-                        Height="35"
+                        Width="36"
+                        Height="34"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        VerticalAlignment="Top"
+                        Style="{StaticResource DockBtnStyle}" Margin="0,8,0,0" Click="Setting_Click_1">
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />

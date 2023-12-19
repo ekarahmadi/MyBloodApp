@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyBloodAppLogin.Daftar_Voulenteer.List_Event;
 
 namespace MyBloodAppLogin.Settings
 {
@@ -39,7 +40,7 @@ namespace MyBloodAppLogin.Settings
         //MENU UTAMA
         private void LogOutBtn_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
         }
 
 
@@ -47,27 +48,27 @@ namespace MyBloodAppLogin.Settings
         //DOCKBAR
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
         }
 
         private void Setting_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
         }
 
         private void Account_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
         }
 
         private void Event_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("List Event.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("List Event.xaml", UriKind.Relative));
         }
 
         private void News_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -75,6 +76,5 @@ namespace MyBloodAppLogin.Settings
 
         }
 
-        
     }
 }
