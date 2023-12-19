@@ -72,8 +72,8 @@
 
                     <!--Gambar-->
 
-                    <Image x:Name="___Assets_Sardjito_png" Source="/Assets/Sardjito.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
-                    
+                    <Image x:Name="___Assets_Sardjito_png" Source="/Assets/RSGM.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
+
                     <!--Data Rumah Sakit-->
                     <Grid Grid.Row="1">
                         <Grid Grid.Row="3" Grid.Column="1">
@@ -95,10 +95,16 @@
                             <Image Grid.Row="3" Source="/Assets/img_telepon.png" VerticalAlignment="Center" Margin="24,0,-21,0" d:LayoutOverrides="Width" Height="46"/>
 
                             <!--Data-->
-                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="Location" Text="Alamat RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="Jam Buka RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="Telepon RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
-                            <Label Grid.Row="0" Grid.Column="1" Content="Nama Rumah Sakit" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Margin="30,11,0,11" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300">
+                                <Hyperlink NavigateUri="https://maps.app.goo.gl/JY7mW5GzyiXCJmPj8?g_st=i" RequestNavigate="Hyperlink_RequestNavigate">
+                                <Run>Jl. Denta Sekip Utara No.1, Sinduadi, Kec. Mlati,</Run>
+                                <LineBreak/>
+                                <Run>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</Run>
+                                </Hyperlink>
+                            </TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="08.00 - 20.00" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 55312" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Gigi dan Mulut dr. Soedomo" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
                         </Grid>
                     </Grid>
 
@@ -114,14 +120,22 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="300"/>
-                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
+                            <!-- Jenis Darah -->
                             <TextBlock Grid.Row="0" Grid.Column="0" x:Name="GoldarA" Text="Golongan Darah A" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
                             <TextBlock Grid.Row="1" Grid.Column="0" x:Name="GoldarB" Text="Golongan Darah B" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
                             <TextBlock Grid.Row="2" Grid.Column="0" x:Name="GoldarO" Text="Golongan Darah O" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
                             <TextBlock Grid.Row="3" Grid.Column="0" x:Name="GoldarAB" Text="Golongan Darah AB" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
                             <TextBlock Grid.Row="4" Grid.Column="0" x:Name="GoldarTotal" Text="Total" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+
+                            <!-- Data Jenis Darah -->
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="DataGoldarA" Text="{Binding GoldarA}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DataGoldarB" Text="{Binding GoldarB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="DataGoldarO" Text="{Binding GoldarO}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="DataGoldarAB" Text="{Binding GoldarAB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="4" Grid.Column="1" x:Name="DataGoldarTotal" Text="{Binding GoldarTotal}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
                         </Grid>
                     </Grid>
 
