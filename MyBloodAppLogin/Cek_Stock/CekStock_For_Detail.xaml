@@ -61,6 +61,18 @@
                 <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Cek Stok Darah Rumah Sakit" FontFamily="Copperplate Gothic Light" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,49,0,0" d:LayoutOverrides="LeftMargin, RightMargin"/>
             </Grid>
 
+            <!--Main Menu-->
+            <Grid Grid.Row="2">
+                  <Grid Grid.Row="2" Grid.Column="2">
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="165"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    
+                  </Grid>
+            </Grid>
+            
             <!--  Dock Bar Menu  -->
             <Grid
             Grid.Row="3"
