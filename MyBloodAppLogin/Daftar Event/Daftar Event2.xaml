@@ -50,7 +50,7 @@
             <Grid Grid.Row="1">
                 <Image
             x:Name="Logo2"
-            Margin="-15,10,349,730"
+            Margin="9,17,323,597"
             Source="\Assets\Logo.png" />
                 <TextBlock
             x:Name="judul2"
@@ -155,7 +155,7 @@
 
                 <TextBlock
             x:Name="judul_Copy2"
-            Margin="96,44,0,0"
+            Margin="71,44,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             FontFamily="Copperplate Gothic Bold"
