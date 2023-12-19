@@ -61,6 +61,73 @@
                 <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Cek Stok Darah Rumah Sakit" FontFamily="Copperplate Gothic Light" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="14,49,0,0" d:LayoutOverrides="LeftMargin, RightMargin"/>
             </Grid>
 
+            <!--Main Menu-->
+            <Grid Grid.Row="2">
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="165"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Gambar-->
+
+                    <Image x:Name="___Assets_Sardjito_png" Source="/Assets/Sardjito.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
+                    
+                    <!--Data Rumah Sakit-->
+                    <Grid Grid.Row="1">
+                        <Grid Grid.Row="3" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="350"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Icon-Icon-->
+                            <Image Grid.Row="1" Source="/Assets/img_maps.png" Margin="26,6,-22,0"/>
+                            <Image Grid.Row="2" Source="/Assets/img_clock.png" VerticalAlignment="Center" Margin="24,0,-21,0" d:LayoutOverrides="Width" Height="46"/>
+                            <Image Grid.Row="3" Source="/Assets/img_telepon.png" VerticalAlignment="Center" Margin="24,0,-21,0" d:LayoutOverrides="Width" Height="46"/>
+
+                            <!--Data-->
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="Location" Text="Alamat RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="Jam Buka RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="Telepon RS" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Nama Rumah Sakit" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+                        </Grid>
+                    </Grid>
+
+                    <!--Stock Darah-->
+                    <Grid Grid.Row="2">
+                        <Grid Grid.Row="4" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" x:Name="GoldarA" Text="Golongan Darah A" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" x:Name="GoldarB" Text="Golongan Darah B" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" x:Name="GoldarO" Text="Golongan Darah O" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+                            <TextBlock Grid.Row="3" Grid.Column="0" x:Name="GoldarAB" Text="Golongan Darah AB" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+                            <TextBlock Grid.Row="4" Grid.Column="0" x:Name="GoldarTotal" Text="Total" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
             <!--  Dock Bar Menu  -->
             <Grid
             Grid.Row="3"
