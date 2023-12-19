@@ -67,7 +67,7 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
                 <Line X1="135" Y1="100" X2="375" Y2="100" Stroke="Black" StrokeThickness="2" Margin="0,35,0,-35" />
-                <Button Content="LOG OUT" HorizontalAlignment="Center" Margin="0,398,0,87" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red"/>
+                <Button x:Name="LogOutBtn" Content="LOG OUT" HorizontalAlignment="Center" Margin="0,398,0,87" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red" Click="LogOutBtn_Click"/>
             </Grid>
             <!-- DOCKBAR -->
             <Grid Grid.Row="3">

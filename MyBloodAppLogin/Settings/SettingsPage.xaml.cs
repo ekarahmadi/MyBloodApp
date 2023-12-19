@@ -25,9 +25,56 @@ namespace MyBloodAppLogin.Settings
             InitializeComponent();
         }
 
+        //MENU BAR ATAS
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow(this).WindowState = WindowState.Minimized;
+        }
+
+        //MENU UTAMA
+        private void LogOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
+
+
+
+        //DOCKBAR
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
+        }
+
+        private void Account_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
+        }
+
+        private void Event_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("List Event.xaml", UriKind.Relative));
+        }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        
     }
 }
