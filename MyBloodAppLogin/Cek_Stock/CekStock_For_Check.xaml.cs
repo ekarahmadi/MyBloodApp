@@ -60,7 +60,6 @@ namespace MyBloodAppLogin.Cek_Stock
             }
         }
 
-        
     }
 
 

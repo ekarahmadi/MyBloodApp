@@ -46,30 +46,6 @@ namespace MyBloodAppLogin.Daftar_Voulenteer
             }
         }
 
-        //DOCKBAR
-        private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
-        }
-
-        private void Setting_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
-        }
-
-        private void Account_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
-        }
-
-        private void Event_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("List Event.xaml", UriKind.Relative));
-        }
-
-        private void News_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
-        }
+        
     }
 }

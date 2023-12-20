@@ -10,10 +10,9 @@
     d:DesignHeight="800"
     d:DesignWidth="450"
     mc:Ignorable="d">
-    <materialDesign:Card
-        Margin="25"
+    <Grid
         Background="{DynamicResource MaterialDesignPaper}"
-        UniformCornerRadius="20">
+        >
 
         <Grid Grid.Row="3" Height="750">
             <Grid.RowDefinitions>
@@ -52,22 +51,21 @@
             <Grid Grid.Row="1">
                 <Image
                 x:Name="Logo"
-                Margin="23,22,336,22"
-                Source="/LOGO.png"
+                Margin="65,22,336,22"
+                Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\LOGO.png"
                 Stretch="Fill" />
                 <TextBlock
                 x:Name="Welcome"
                 Width="321"
-                Margin="85,32,0,0"
+                Margin="127,30,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontFamily="Copperplate Gothic Bold"
                 FontSize="18"
                 Text="Kantong Darah App"
-                TextWrapping="Wrap"
-                d:LayoutOverrides="Height" />
+                TextWrapping="Wrap" Height="22" />
                 <TextBlock
-                Margin="85,51,0,0"
+                Margin="127,51,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontFamily="Copperplate Gothic Light"
@@ -191,7 +189,7 @@
                 <Button
                     x:Name="DaftarAksi"
                     Grid.Row="1"
-                    Margin="215,78,21,39"
+                    Margin="270,78,17,37"
                     materialDesign:ButtonAssist.CornerRadius="15"
                     Content="DAFTAR SEKARANG"
                     FontFamily="Montserrat Black"
@@ -204,29 +202,28 @@
 Grid.Row="3"
 Grid.Column="4"
 Height="50"
-Width="400"
-    Margin="0,0,0,0">
+>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="303"/>
-                    <ColumnDefinition Width="97"/>
+                    <ColumnDefinition Width="303*"/>
+                    <ColumnDefinition Width="97*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border
     Grid.Column="0"
-    Grid.ColumnSpan="3"
+    Grid.ColumnSpan="2"
     Background="DarkRed"
     CornerRadius="0,0,0,0" />
 
-                <Grid Grid.ColumnSpan="3">
+                <Grid Grid.ColumnSpan="2">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="10" />
                     </Grid.ColumnDefinitions>
 
                     <!--  News  -->
@@ -237,7 +234,7 @@ Width="400"
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}" Click="News_Click">
+        Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
@@ -275,10 +272,10 @@ Width="400"
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}" Click="Event_Click">
+        Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -313,10 +310,10 @@ Width="400"
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}" Click="Home_Click">
+        Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -351,10 +348,10 @@ Width="400"
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}" Click="Account_Click">
+        Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -388,10 +385,10 @@ Width="400"
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}" Click="Setting_Click">
+        Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
             Width="80"
@@ -419,7 +416,7 @@ Width="400"
                 </Grid>
             </Grid>
         </Grid>
-    </materialDesign:Card>
+    </Grid>
 
 
 

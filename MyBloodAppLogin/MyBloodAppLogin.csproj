@@ -18,6 +18,7 @@
   <ItemGroup>
     <None Remove="account-25 1.png" />
     <None Remove="Assets\minimize_mo.png" />
+    <None Remove="Assets\news_button.png" />
     <None Remove="LOGO.png" />
   </ItemGroup>
 
@@ -43,6 +44,7 @@
   <ItemGroup>
     <Resource Include="account-25 1.png" />
     <Resource Include="Assets\minimize_mo.png" />
+    <Resource Include="Assets\news_button.png" />
     <Resource Include="LOGO.png" />
     <Resource Include="Model\Dockbar.xaml" />
   </ItemGroup>

@@ -11,10 +11,9 @@
     d:DesignWidth="450"
     mc:Ignorable="d">
 
-    <materialDesign:Card
-    Margin="25"
+    <Grid
     Background="{DynamicResource MaterialDesignPaper}"
-    UniformCornerRadius="20">
+    >
 
         <Grid Grid.Row="2" Height="750">
             <Grid.RowDefinitions>
@@ -51,7 +50,7 @@
                 <Image
             x:Name="Logo2"
             Margin="9,17,323,597"
-            Source="\Assets\Logo.png" />
+            Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\LOGO.png" />
                 <TextBlock
             x:Name="judul2"
             Margin="0,17,0,0"
@@ -155,7 +154,7 @@
 
                 <TextBlock
             x:Name="judul_Copy2"
-            Margin="71,44,0,0"
+            Margin="97,44,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             FontFamily="Copperplate Gothic Bold"
@@ -176,32 +175,31 @@
 
             <!--  Dock Bar Menu  -->
             <Grid
-            Grid.Row="2"
-            Grid.Column="4"
-            Height="50"
-            Width="400"
-            Margin="0,0,0,0">
+Grid.Row="2"
+Grid.Column="4"
+Height="50"
+>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="303"/>
-                    <ColumnDefinition Width="97"/>
+                    <ColumnDefinition Width="303*"/>
+                    <ColumnDefinition Width="97*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border
     Grid.Column="0"
-    Grid.ColumnSpan="3"
+    Grid.ColumnSpan="2"
     Background="DarkRed"
     CornerRadius="0,0,0,0" />
 
-                <Grid Grid.ColumnSpan="3">
+                <Grid Grid.ColumnSpan="2">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="10" />
                     </Grid.ColumnDefinitions>
 
                     <!--  News  -->
@@ -219,12 +217,12 @@
                         </Button.Background>
 
                         <Popup
-        Width="80"
-        HorizontalOffset="21"
-        IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
-        PlacementTarget="{Binding ElementName=News}"
-        Style="{StaticResource PopupStyle}"
-        VerticalOffset="-10">
+            Width="80"
+            HorizontalOffset="21"
+            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
+            PlacementTarget="{Binding ElementName=News}"
+            Style="{StaticResource PopupStyle}"
+            VerticalOffset="-10">
 
                             <Grid>
 
@@ -253,7 +251,7 @@
         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -291,7 +289,7 @@
         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -329,7 +327,7 @@
         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -366,7 +364,7 @@
         Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
             Width="80"
@@ -397,5 +395,5 @@
 
         </Grid>
 
-    </materialDesign:Card>
+    </Grid>
 </Page>

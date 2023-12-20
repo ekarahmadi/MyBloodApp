@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyBloodAppLogin.Cek_Stock;
+using MyBloodAppLogin.Daftar_Event;
 using MyBloodAppLogin.Daftar_Voulenteer;
+using MyBloodAppLogin.Homepage;
 
 namespace MyBloodAppLogin.Settings
 {
@@ -45,35 +48,25 @@ namespace MyBloodAppLogin.Settings
 
 
 
-        //DOCKBAR
+        //DOCKBAR Navigation
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
-        }
-
-        private void Setting_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("\\Homepage\\Home", UriKind.Relative));
         }
 
         private void Account_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("\\DaftarEvent\\Dafatr_Event1", UriKind.Relative));
         }
 
         private void Event_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("List Event.xaml", UriKind.Relative));
+            NavigationService?.Navigate(new Uri("\\Daftar_Voulunteer\\List_Event", UriKind.Relative));
         }
 
         private void News_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            NavigationService?.Navigate(new Uri("\\DaftarEvent\\Dafatr_Event1", UriKind.Relative));
         }
 
     }

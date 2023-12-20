@@ -11,6 +11,7 @@
     Height="800"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     mc:Ignorable="d">
+    
     <Grid Background="{DynamicResource MaterialDesignPaper}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="205*"/>

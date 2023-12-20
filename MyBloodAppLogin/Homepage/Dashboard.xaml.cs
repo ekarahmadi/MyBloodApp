@@ -19,27 +19,13 @@ namespace MyBloodAppLogin.Homepage
     /// <summary>
     /// Interaction logic for Homepage.xaml
     /// </summary>
-    public partial class Homepage : Window
+    public partial class Homepage : Page
     {
         public Homepage()
         {
             InitializeComponent();
         }
 
-        private void MainVolunteer_Click(object sender, RoutedEventArgs e)
-        {
-            if (homepageFrame.NavigationService != null)
-            {
-                homepageFrame.NavigationService.Navigate(new Uri("List_Event.xaml", UriKind.Relative));
-            }
-        }
-
-        private void MainEvent_Click(object sender, RoutedEventArgs e)
-        {
-            if (homepageFrame.NavigationService != null)
-            {
-                homepageFrame.NavigationService.Navigate(new Uri("List_Event.xaml", UriKind.Relative));
-            }
-        }
     }
+    
 }

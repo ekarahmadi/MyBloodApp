@@ -10,11 +10,9 @@
       Background="{x:Null}"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
       mc:Ignorable="d">
-
-    <materialDesign:Card
-        Margin="25"
+    <Grid
         Background="{DynamicResource MaterialDesignPaper}"
-        UniformCornerRadius="20">
+        >
         <Grid Grid.Row="3" Height="750">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35" />
@@ -56,7 +54,7 @@
                 <Rectangle Fill="#F9494A" RadiusX="10" RadiusY="10" Margin="10,5,10,318"/>
                 <Ellipse x:Name="Foto_Setting" Margin="10,75,278,400" RenderTransformOrigin="0.17,0.12">
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="\Assets\donor.png" Stretch="UniformToFill" />
+                        <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\Donor.png" Stretch="UniformToFill" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <TextBlock x:Name="Nama_Setting" Text="Brian Tirafi Aufauzan" Margin="138,104,30,427" RenderTransformOrigin="0.5,0.5" FontFamily="Montserrat" FontSize="22" Foreground="Black"/>
@@ -69,52 +67,56 @@
                 <Line X1="135" Y1="100" X2="375" Y2="100" Stroke="Black" StrokeThickness="2" Margin="0,35,0,-35" />
                 <Button x:Name="LogOutBtn" Content="LOG OUT" HorizontalAlignment="Center" Margin="0,398,0,87" Height ="80" Width="344" FontSize="35" FontFamily="Montserrat" Background="White" Foreground="Red" Click="LogOutBtn_Click"/>
             </Grid>
-            <!-- DOCKBAR -->
-            <Grid Grid.Row="3">
+            <!--  Dock Bar Menu  -->
+            <Grid
+    Grid.Row="3"
+    Grid.Column="4"
+    Height="50"
+    Margin="0,0,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="303"/>
-                    <ColumnDefinition Width="97"/>
+                    <ColumnDefinition Width="303*"/>
+                    <ColumnDefinition Width="97*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border
-                    Grid.Column="0"
-                    Grid.ColumnSpan="3"
-                    Background="DarkRed"
-                    CornerRadius="0,0,0,0" />
+        Grid.Column="0"
+        Grid.ColumnSpan="2"
+        Background="DarkRed"
+        CornerRadius="0,0,0,0" />
 
-                <Grid Grid.ColumnSpan="3">
+                <Grid Grid.ColumnSpan="2">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="76" />
+                        <ColumnDefinition Width="10" />
                     </Grid.ColumnDefinitions>
 
                     <!--  News  -->
                     <Button
-                        x:Name="News"
-                        Grid.Column="1"
-                        Width="35"
-                        Height="35"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+            x:Name="News"
+            Grid.Column="1"
+            Width="35"
+            Height="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-                            Width="80"
-                            HorizontalOffset="21"
-                            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
-                            PlacementTarget="{Binding ElementName=News}"
-                            Style="{StaticResource PopupStyle}"
-                            VerticalOffset="-10">
+                Width="80"
+                HorizontalOffset="21"
+                IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
+                PlacementTarget="{Binding ElementName=News}"
+                Style="{StaticResource PopupStyle}"
+                VerticalOffset="-10">
 
                             <Grid>
 
@@ -134,25 +136,25 @@
 
                     <!--  Daftar Event  -->
                     <Button
-                        x:Name="Event"
-                        Grid.Column="2"
-                        Width="35"
-                        Height="35"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+            x:Name="Event"
+            Grid.Column="2"
+            Width="35"
+            Height="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-                            Width="80"
-                            HorizontalOffset="21"
-                            IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
-                            PlacementTarget="{Binding ElementName=Event}"
-                            Style="{StaticResource PopupStyle}"
-                            VerticalOffset="-10">
+                Width="80"
+                HorizontalOffset="21"
+                IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
+                PlacementTarget="{Binding ElementName=Event}"
+                Style="{StaticResource PopupStyle}"
+                VerticalOffset="-10">
 
                             <Grid>
 
@@ -172,25 +174,25 @@
 
                     <!--  Home  -->
                     <Button
-                        x:Name="Home"
-                        Grid.Column="3"
-                        Width="35"
-                        Height="35"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+            x:Name="Home"
+            Grid.Column="3"
+            Width="35"
+            Height="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-                            Width="80"
-                            HorizontalOffset="21"
-                            IsOpen="{Binding ElementName=Home, Path=IsMouseOver, Mode=OneWay}"
-                            PlacementTarget="{Binding ElementName=Home}"
-                            Style="{StaticResource PopupStyle}"
-                            VerticalOffset="-10">
+                Width="80"
+                HorizontalOffset="21"
+                IsOpen="{Binding ElementName=Home, Path=IsMouseOver, Mode=OneWay}"
+                PlacementTarget="{Binding ElementName=Home}"
+                Style="{StaticResource PopupStyle}"
+                VerticalOffset="-10">
 
                             <Grid>
 
@@ -210,25 +212,25 @@
 
                     <!--  Account  -->
                     <Button
-                        x:Name="Account"
-                        Grid.Column="4"
-                        Width="35"
-                        Height="35"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+            x:Name="Account"
+            Grid.Column="4"
+            Width="35"
+            Height="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-                            Width="80"
-                            HorizontalOffset="21"
-                            IsOpen="{Binding ElementName=Account, Path=IsMouseOver, Mode=OneWay}"
-                            PlacementTarget="{Binding ElementName=Account}"
-                            Style="{StaticResource PopupStyle}"
-                            VerticalOffset="-10">
+                Width="80"
+                HorizontalOffset="21"
+                IsOpen="{Binding ElementName=Account, Path=IsMouseOver, Mode=OneWay}"
+                PlacementTarget="{Binding ElementName=Account}"
+                Style="{StaticResource PopupStyle}"
+                VerticalOffset="-10">
 
                             <Grid>
 
@@ -247,24 +249,24 @@
 
                     <!--  Setting  -->
                     <Button
-                        x:Name="Setting"
-                        Grid.Column="5"
-                        Width="36"
-                        Height="34"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Top"
-                        Style="{StaticResource DockBtnStyle}" Margin="0,8,0,0">
+            x:Name="Setting"
+            Grid.Column="5"
+            Width="35"
+            Height="35"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{StaticResource DockBtnStyle}">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
-                            Width="80"
-                            HorizontalOffset="21"
-                            IsOpen="{Binding ElementName=Setting, Path=IsMouseOver, Mode=OneWay}"
-                            PlacementTarget="{Binding ElementName=Setting}"
-                            Style="{StaticResource PopupStyle}"
-                            VerticalOffset="-10">
+                Width="80"
+                HorizontalOffset="21"
+                IsOpen="{Binding ElementName=Setting, Path=IsMouseOver, Mode=OneWay}"
+                PlacementTarget="{Binding ElementName=Setting}"
+                Style="{StaticResource PopupStyle}"
+                VerticalOffset="-10">
 
                             <Grid>
 
@@ -282,7 +284,8 @@
                     </Button>
 
                 </Grid>
+
             </Grid>
         </Grid>
-    </materialDesign:Card>
+    </Grid>
 </Page>

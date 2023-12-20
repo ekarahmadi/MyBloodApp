@@ -175,7 +175,8 @@
                         Height="35"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        Click="News_Click"
+                        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
@@ -212,11 +213,11 @@
                         Width="35"
                         Height="35"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        VerticalAlignment="Center" Click="Event_Click"
+                        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -250,11 +251,11 @@
                         Width="35"
                         Height="35"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        VerticalAlignment="Center" Click="Home_Click"
+                        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -285,14 +286,14 @@
                     <Button
                         x:Name="Account"
                         Grid.Column="4"
-                        Width="35"
-                        Height="35"
+                        Width="36"
+                        Height="34"
                         HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        VerticalAlignment="Top" Margin="0,8,0,0" Click="Account_Click"
+                        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -326,10 +327,10 @@
                         Height="35"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Style="{StaticResource DockBtnStyle}">
+                        Click="Setting_Click">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
                             Width="80"

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace MyBloodAppLogin.Daftar_Event
 {
     /// <summary>
-    /// Interaction logic for Daftar_Event2.xaml
+    /// Interaction logic for Daftar_Event1.xaml
     /// </summary>
-    public partial class Daftar_Event2 : Page
+    public partial class Daftar_Event1 : Page
     {
-        public Daftar_Event2()
+        public Daftar_Event1()
         {
             InitializeComponent();
         }
@@ -47,31 +47,8 @@ namespace MyBloodAppLogin.Daftar_Event
             }
         }
 
-        //DOCKBAR
-        private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
-        }
 
-        private void Setting_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
-        }
 
-        private void Account_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
-        }
-
-        private void Event_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("List Event.xaml", UriKind.Relative));
-        }
-
-        private void News_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
-        }
-
+        
     }
 }

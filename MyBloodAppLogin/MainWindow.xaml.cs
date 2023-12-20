@@ -29,7 +29,7 @@ namespace MyBloodAppLogin
 
         private void NoAccount_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("Page1.xaml", UriKind.Relative));
+            mainFrame.Navigate(new Uri("\\Settings\\SettingsPage.xaml", UriKind.Relative));
             //mainFrame = Close;
         }
 
@@ -87,31 +87,33 @@ namespace MyBloodAppLogin
 
         }
 
-        //DOCKBAR
+        //DOCKBAR Navigation
         private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
-        }
-
-        private void Setting_Click(object sender, RoutedEventArgs e)
-        {
-            mainFrame.Navigate(new Uri("SettingsPage.xaml", UriKind.Relative));
-        }
-
-        private void Account_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new Uri("CekStock_For_Check.xaml", UriKind.Relative));
         }
 
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("\\Settings\\SettingsPage.xaml", UriKind.Relative));
+        }
+
+        private void Account_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("\\Cek_Stock\\CekStock_For_Check.xaml", UriKind.Relative));
+        }
+
         private void Event_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("List Event.xaml", UriKind.Relative));
+            mainFrame.Navigate(new Uri("\\Daftar Voulenteer\\List_Event.xaml", UriKind.Relative));
         }
 
         private void News_Click(object sender, RoutedEventArgs e)
         {
-            mainFrame.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
+            mainFrame.Navigate(new Uri("\\Daftar Event\\Daftar_Event1.xaml", UriKind.Relative));
         }
+
+       
     }
 
 }

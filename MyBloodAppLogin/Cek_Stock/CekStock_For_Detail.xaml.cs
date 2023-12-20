@@ -57,5 +57,6 @@ namespace MyBloodAppLogin.Cek_Stock
                 e.Handled = true;
             }
         }
+
     }
 }
