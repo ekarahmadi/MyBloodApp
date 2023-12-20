@@ -72,7 +72,7 @@
                 FontFamily="Montserrat"
                 FontSize="23"
                 Background="DarkRed"
-                TextBlock.TextAlignment="Center" Click="Button_Click_1">
+                TextBlock.TextAlignment="Center">
                     <TextBlock FontSize="30">
                     <Run Text="Halo," />
                     <Run Text="BRIAN" TextDecorations="Underline" />
@@ -103,7 +103,7 @@
                 BorderBrush="Transparent"
                 BorderThickness="0"
                 Content=""
-                RenderTransformOrigin="0.517,0.1" Click="ListEventWidget_Click">
+                RenderTransformOrigin="0.517,0.1">
                     <Button.ContentTemplate>
                         <DataTemplate />
                     </Button.ContentTemplate>

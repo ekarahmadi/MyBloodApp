@@ -253,7 +253,7 @@
                         Height="34"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top"
-                        Style="{StaticResource DockBtnStyle}" Margin="0,8,0,0" Click="Setting_Click_1">
+                        Style="{StaticResource DockBtnStyle}" Margin="0,8,0,0">
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />

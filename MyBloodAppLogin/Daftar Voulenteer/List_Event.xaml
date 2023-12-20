@@ -27,12 +27,12 @@
             <Button
             x:Name="ExitBtn"
             Width="21"
-            Height="27"
-            Margin="364,11,0,0"
+            Height="NaN"
+            Margin="364,11,0,-3"
             HorizontalAlignment="Left"
             Click="ExitBtn_Click"
             RenderTransformOrigin="0.527,0.787"
-            Style="{StaticResource CloseBtnStyle}" />
+            Style="{StaticResource CloseBtnStyle}" VerticalAlignment="Stretch" />
 
             <!--  // MinimizeButton //  -->
             <Button

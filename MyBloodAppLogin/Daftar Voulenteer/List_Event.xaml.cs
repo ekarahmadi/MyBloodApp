@@ -13,32 +13,37 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyBloodAppLogin.Daftar_Event
+namespace MyBloodAppLogin.Daftar_Voulenteer
 {
     /// <summary>
-    /// Interaction logic for Daftar_Event2.xaml
+    /// Interaction logic for List_Event.xaml
     /// </summary>
-    public partial class Daftar_Event2 : Page
+    public partial class List_Event : Page
     {
-        public Daftar_Event2()
+        public List_Event()
         {
             InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
 
         //MENU BAR ATAS
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            // If your UserControl is hosted within a Window
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.Close();
+            }
         }
 
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
-            Window.GetWindow(this).WindowState = WindowState.Minimized;
+            // Assuming this UserControl is hosted within a Window
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.WindowState = WindowState.Minimized;
+            }
         }
 
         //DOCKBAR
@@ -66,6 +71,5 @@ namespace MyBloodAppLogin.Daftar_Event
         {
             NavigationService?.Navigate(new Uri("Daftar Event1.xaml", UriKind.Relative));
         }
-
     }
 }

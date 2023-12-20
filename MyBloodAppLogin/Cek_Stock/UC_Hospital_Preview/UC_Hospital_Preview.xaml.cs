@@ -24,7 +24,7 @@ namespace MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview
         {
             InitializeComponent();
             this.DataContext = this;
-            Icon_Hospital_Maps.Source = new BitmapImage(new Uri("/Assets/img_maps.png", UriKind.Relative));
+           
         }
         
     }

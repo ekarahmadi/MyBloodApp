@@ -31,25 +31,25 @@
 
                 <!--  // Exit Button //  -->
                 <Button
-                    x:Name="ExitBtn"
-                    Width="21"
-                    Height="27"
-                    Margin="364,11,0,0"
-                    HorizontalAlignment="Left"
-                    Click="ExitBtn_Click"
-                    RenderTransformOrigin="0.527,0.787"
-                    Style="{StaticResource CloseBtnStyle}" />
+        x:Name="ExitBtn"
+        Width="21"
+        Height="27"
+        Margin="364,11,0,0"
+        HorizontalAlignment="Left"
+        Click="ExitBtn_Click"
+        RenderTransformOrigin="0.527,0.787"
+        Style="{StaticResource CloseBtnStyle}" />
 
                 <!--  // MinimizeButton //  -->
                 <Button
-                    x:Name="MinimizeBtn"
-                    Width="21"
-                    Height="27"
-                    Margin="334,11,0,0"
-                    HorizontalAlignment="Left"
-                    Click="Minimize_Click"
-                    RenderTransformOrigin="0.4 ,0.787"
-                    Style="{StaticResource MinimizeBtnStyle}" />
+        x:Name="MinimizeBtn"
+        Width="21"
+        Height="27"
+        Margin="334,11,0,0"
+        HorizontalAlignment="Left"
+        Click="Minimize_Click"
+        RenderTransformOrigin="0.4 ,0.787"
+        Style="{StaticResource MinimizeBtnStyle}" />
 
 
             </Grid>

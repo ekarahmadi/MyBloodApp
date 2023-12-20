@@ -25,21 +25,29 @@ namespace MyBloodAppLogin.Daftar_Event
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
 
         //MENU BAR ATAS
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            // If your UserControl is hosted within a Window
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.Close();
+            }
         }
 
         private void Minimize_Click(object sender, RoutedEventArgs e)
         {
-            Window.GetWindow(this).WindowState = WindowState.Minimized;
+            // Assuming this UserControl is hosted within a Window
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.WindowState = WindowState.Minimized;
+            }
         }
+
+        
 
         //DOCKBAR
         private void Home_Click(object sender, RoutedEventArgs e)

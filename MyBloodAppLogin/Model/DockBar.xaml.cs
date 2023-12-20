@@ -25,6 +25,9 @@ namespace MyBloodAppLogin.Model
             InitializeComponent();
         }
 
-
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
