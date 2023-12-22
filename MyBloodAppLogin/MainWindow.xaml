@@ -89,7 +89,7 @@
                 FontFamily="Sitka Banner"
                 FontSize="18"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                TextWrapping="Wrap" TextChanged="txtEmailAddress_TextChanged" />
+                TextWrapping="Wrap" />
 
             <PasswordBox
                 x:Name="txtPassword"

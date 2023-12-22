@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Window
     x:Class="MyBloodAppLogin.Cek_Stock.CekStock_For_Check"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,15 +6,20 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local ="clr-namespace:MyBloodAppLogin.Cek_Stock.UC_Hospital_Preview"
-    
     Title="CekStock_For_Check"
-    d:DesignHeight="800"
-    d:DesignWidth="450"
+    Height="800"
+    Width="450"
+    AllowsTransparency="True"
+    Background="{x:Null}"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
 
-    <Grid
-        
+    <materialDesign:Card
+        Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
+        UniformCornerRadius="20"
         >
         <Grid Grid.Row="3" Height="750">
             <Grid.RowDefinitions>
@@ -79,7 +84,13 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Foto Profile-->
-                            <Image Grid.Column="0" x:Name="Sardjito_Square" Margin="4,4,0,2" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\Sardjito_Square.png" Stretch="Fill" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="126"/>
+                            <Image Grid.Column="0" 
+                                   x:Name="Sardjito_Square" 
+                                   Margin="4,4,0,2" 
+                                   Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\Sardjito_Square.png" 
+                                   Stretch="Fill" 
+                                   d:LayoutOverrides="VerticalAlignment" 
+                                   HorizontalAlignment="Left" Width="126"/>
 
                             <!--Icon-->
                             <Grid Grid.Column="1">
@@ -101,21 +112,26 @@
                             <Grid Grid.Column="2">
                                 <Grid Grid.Row="3">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="39.5"/>
+                                        <RowDefinition Height="4.772"/>
+                                        <RowDefinition Height="34.728"/>
                                         <RowDefinition Height="39.5"/>
                                         <RowDefinition Height="39.5"/>
                                         <RowDefinition Height="39.5"/>
                                     </Grid.RowDefinitions>
 
                                     <!--Data-->
-                                    <TextBlock Grid.Row="1" Margin="0,4,0,3" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300" Foreground="White">
+                                    <TextBlock Grid.Row="2" Margin="0,4,0,3" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300" Foreground="White">
                                             <Run>Jl. Kesehatan No.1, Sendowo, Sinduadi </Run>
                                             <LineBreak/>
                                             <Run>Kec. Mlati, Sleman, DIY 55281</Run>
                                     </TextBlock>
-                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
-                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 631190" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit dr. Sardjito" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
+                                    <TextBlock Grid.Row="3" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
+                                    <TextBlock Grid.Row="4" x:Name="Telepon" Text="(0274) 631190" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                                    <Button
+                                        Background="Black"
+                                        x:Name="Page1" Content="Detail"
+                                        Click="Detail1" Margin="123,2,17,5" Grid.Row="4"/>
+                                    <Label Grid.Row="1" Content="Rumah Sakit dr. Sardjito" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,-2,0,0"/>
 
                                 </Grid>
 
@@ -168,7 +184,11 @@
                                         <Run>Gamping, Sleman, DIY 55291 </Run>
                                     </TextBlock>
                                     <TextBlock Grid.Row="2" Grid.Column="1" x:Name="OpenRSA" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
-                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TeleponRSA" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TeleponRSA" Text="(0274)4530404" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
+                                    <Button
+                                        Background="Black"
+                                        x:Name="Page2" Content="Detail"
+                                        Click="Detail2" Margin="123,2,17,5" Grid.Row="4"/>
                                     <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
 
                                 </Grid>
@@ -177,59 +197,6 @@
                         </Grid>
                     </materialDesign:Card>
 
-                    <!--Rumah Sakit RSGM dr. Soedomo-->
-                    <materialDesign:Card Grid.Row="2" Margin="15" Background="DarkRed" UniformCornerRadius="20">
-                        <Grid Grid.Column="2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="130"/>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="210"/>
-                            </Grid.ColumnDefinitions>
-
-                            <!-- Foto Profile-->
-                            <Image Grid.Column="0" x:Name="RSGM_Square" Margin="4,4,0,2" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\RSGM_Square.png" Stretch="Fill" d:LayoutOverrides="VerticalAlignment" HorizontalAlignment="Left" Width="126"/>
-
-                            <!--Icon-->
-                            <Grid Grid.Column="1">
-                                <Grid Grid.Row="3">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                    </Grid.RowDefinitions>
-                                    <!--Icon-Icon-->
-                                    <Image Grid.Row="1" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\img_maps.png"/>
-                                    <Image Grid.Row="2" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\img_clock.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
-                                    <Image Grid.Row="3" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\img_telepon.png" VerticalAlignment="Center"  d:LayoutOverrides="Width" Height="46"/>
-                                </Grid>
-                            </Grid>
-
-                            <!--Data RS-->
-                            <Grid Grid.Column="2">
-                                <Grid Grid.Row="3">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                        <RowDefinition Height="39.5"/>
-                                    </Grid.RowDefinitions>
-
-                                    <!--Data-->
-                                    <TextBlock Grid.Row="1" x:Name="AlamatRSGM" Margin="0,4,0,3" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300" Foreground="White">
-                    <Run>Jl. Denta Sekip Utara No.1, Sendowo,  </Run>
-                    <LineBreak/>
-                    <Run> Sinduadi, Mlati, Sleman, DIY 55281</Run>
-                                    </TextBlock>
-                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="OpenRSGM" Text="08.00 - 20.00" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight" FontSize="18" Foreground="White"/>
-                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="TeleponRSGM" Text="(0274) 55312" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="18" Foreground="White"/>
-                                    <Label Grid.Row="0" Grid.Column="1" Content="RSGM dr. Soedomo UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22" Foreground="#DDFFFFFF" Margin="-25,0,0,0"/>
-
-                                </Grid>
-
-                            </Grid>
-                        </Grid>
-                    </materialDesign:Card>
                 </Grid>
             </Grid>
 
@@ -269,8 +236,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="News_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
@@ -288,7 +255,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="News" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Cek Stock" />
 
                                 </Border>
 
@@ -307,8 +274,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Event_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
@@ -326,7 +293,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="Event" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Daftar Event" />
 
                                 </Border>
 
@@ -345,8 +312,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Home_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
@@ -383,8 +350,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Account_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
@@ -402,7 +369,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="Account" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Daftar Volunteer" />
 
                                 </Border>
 
@@ -420,8 +387,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Setting_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
@@ -458,5 +425,5 @@ Height="50"
 
 
 
-    </Grid>
-</Page>
+    </materialDesign:Card>
+</Window>

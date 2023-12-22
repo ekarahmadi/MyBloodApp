@@ -14,13 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MongoDB.Driver.Core.Configuration;
+using MyBloodAppLogin.BLL;
+using MyBloodAppLogin.DAL;
+using MyBloodAppLogin.Homepage;
 
 namespace MyBloodAppLogin
 {
-    public partial class Page1 : Page
-    {
-        public string connectionString = @"Data Source=EKARAHMADI\SQLEXPRESS;Database=myBloodLogReg;Integrated Security=True";
-
+    public partial class Page1 : Window
+    { 
         public Page1()
         {
             InitializeComponent();
@@ -28,67 +29,28 @@ namespace MyBloodAppLogin
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            try
+            ClassBLL objbll = new ClassBLL();
+            if (objbll.SaveUserTable(txtEmailAddressRegist.Text, txtNama.Text, txtNIK.Text, boxGender.SelectedValue?.ToString(), txtAlamat.Text, txtTanggalLahir.Text,boxBloodType.SelectedValue?.ToString(),txtBodyWeight.Text,txtPassword.Text))
             {
-                using (SqlConnection conReg = new SqlConnection(connectionString))
-              
-                {
-                    conReg.Open();
-
-                    string add_data = "INSERT INTO [dbo].[user] VALUES(@emailUser,@nameUser,@NIKUser,@genderUser,@addressUser,@birthdayUser,@bltypeUser,@weightUser,@passwordUser)";
-                    using (SqlCommand cmd = new SqlCommand(add_data, conReg))
-                    {
-                        cmd.Parameters.AddWithValue("@emailUser", txtEmailAddressRegist.Text);
-                        cmd.Parameters.AddWithValue("@nameUser", txtNama.Text);
-                        cmd.Parameters.AddWithValue("@NIKUser", txtNIK.Text);
-                        cmd.Parameters.AddWithValue("@genderUser", boxGender.SelectedValue?.ToString()); // Gunakan SelectedValue
-                        cmd.Parameters.AddWithValue("@addressUser", txtAlamat.Text);
-                        cmd.Parameters.AddWithValue("@birthdayUser", txtTanggalLahir.Text);
-                        cmd.Parameters.AddWithValue("@bltypeUser", boxBloodType.SelectedValue?.ToString()); // Gunakan SelectedValue
-                        cmd.Parameters.AddWithValue("@weightUser", txtBodyWeight.Text);
-                        cmd.Parameters.AddWithValue("@passwordUser", txtPassword.Text);
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    // Commit transaksi
-                    using (SqlTransaction transaction = conReg.BeginTransaction())
-                    {
-                        transaction.Commit();
-                    }
-                }
-
-                MessageBox.Show("Registrasi berhasil!");
-
-                // Bersihkan input setelah registrasi
-                txtEmailAddressRegist.Text = "";
-                txtNama.Text = "";
-                txtNIK.Text = "";
-                txtAlamat.Text = "";
-                txtTanggalLahir.Text = "";
-                txtBodyWeight.Text = "";
-                txtPassword.Text = "";
+                MessageBox.Show("PENDAFTARAN BERHASIL");
+                Dashboard homepage = new Dashboard();
+                homepage.Show();
+                this.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("GAGAL, MOHON CEK DAN ULANG KEMBALI");
             }
-        }
-
-
-        private void txtEmailAddressRegist_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            // Logika yang mungkin Anda tambahkan di sini
         }
 
         private void AdaAkun_Click(object sender, RoutedEventArgs e)
         {
             MainWindow login = new MainWindow ();
-            Page1 page = new Page1 ();  
+            
             login.Show();
         }
 
-        private void boxBloodType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void txtAlamat_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

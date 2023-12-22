@@ -1,25 +1,23 @@
-﻿<Window
-    x:Class="MyBloodAppLogin.Cek_Stock.CekStock_For_Detail"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock"
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="CekStock_For_Detail"
-    Width="450"
-    Height="800"
-    AllowsTransparency="True"
-    Background="{x:Null}"
-    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    WindowStartupLocation="CenterScreen"
-    WindowStyle="None"
-    mc:Ignorable="d">
+﻿<Window x:Class="MyBloodAppLogin.Cek_Stock.CekStock_For_Detail1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyBloodAppLogin.Cek_Stock"
+        Width="450"
+        Height="800"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        mc:Ignorable="d">
 
     <materialDesign:Card
-        Margin="25"
-        Background="{DynamicResource MaterialDesignPaper}"
-        UniformCornerRadius="20">
+    Margin="25"
+    Background="{DynamicResource MaterialDesignPaper}"
+    UniformCornerRadius="20">
 
         <Grid Grid.Row="3" Height="750">
             <Grid.RowDefinitions>
@@ -76,10 +74,10 @@
 
                     <!--Gambar-->
 
-                    <Image x:Name="Assets_Sardjito_png" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\Sardjito.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
+                    <Image x:Name="Assets_Sardjito_png" Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\RSA.png" Stretch="Fill" Width="264" HorizontalAlignment="Center" Margin="0,6,0,13"/>
 
                     <!--Data Rumah Sakit-->
-                    <Grid Grid.Row="1" >
+                    <Grid Grid.Row="1">
                         <Grid Grid.Row="3" Grid.Column="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"/>
@@ -100,15 +98,15 @@
 
                             <!--Data-->
                             <TextBlock Grid.Row="1" Grid.Column="1" Margin="30,11,0,11" HorizontalAlignment="Left" FontFamily="Bahnschrift Light" Width="300">
-                                <Hyperlink NavigateUri="https://maps.app.goo.gl/d5NoF9WkCLt4V2kX7?g_st=iw" RequestNavigate="Hyperlink_RequestNavigate">
-                                <Run>Jl. Kesehatan No.1, Sendowo, Sinduadi, Kec. Mlati</Run>
+                                <Hyperlink NavigateUri="https://maps.app.goo.gl/JY7mW5GzyiXCJmPj8?g_st=iw" RequestNavigate="Hyperlink_RequestNavigate">
+                                <Run>Jl. Kabupaten, Kranggahan I, Trihanggo, </Run>
                                 <LineBreak/>
-                                <Run>Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</Run>
+                                <Run>Gamping, Sleman, DIY 55291</Run>
                                 </Hyperlink>
                             </TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Opens" Text="24 Jam" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
-                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 631190" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
-                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit dr. Sardjito" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Telepon" Text="(0274) 4530404" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift Light" FontSize="18"/>
+                            <Label Grid.Row="0" Grid.Column="1" Content="Rumah Sakit Akademik UGM" FontFamily="Bahnschrift SemiBold Condensed" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="22"/>
                         </Grid>
                     </Grid>
 
@@ -133,11 +131,11 @@
                             <TextBlock Grid.Row="3" Grid.Column="0" x:Name="GoldarAB" Text="Golongan Darah AB" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
 
                             <!-- Data Jenis Darah -->
-                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="DataGoldarA" Text="10" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
-                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DataGoldarB" Text="20" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
-                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="DataGoldarO" Text="30" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
-                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="DataGoldarAB" Text="40" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
-                            
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="DataGoldarA" Text="{Binding GoldarA}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DataGoldarB" Text="{Binding GoldarB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="DataGoldarO" Text="{Binding GoldarO}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="DataGoldarAB" Text="{Binding GoldarAB}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
+                            <TextBlock Grid.Row="4" Grid.Column="1" x:Name="DataGoldarTotal" Text="{Binding GoldarTotal}" HorizontalAlignment="Center" FontFamily="Bahnschrift SemiBold" FontSize="24" Margin="0,7,0,5" d:LayoutOverrides="Height"/>
                         </Grid>
                     </Grid>
 
@@ -199,7 +197,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="Cek Stock" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="News" />
 
                                 </Border>
 
@@ -237,7 +235,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="Daftar Event" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Event" />
 
                                 </Border>
 
@@ -313,7 +311,7 @@ Height="50"
 
                                 <Border Style="{StaticResource border}">
 
-                                    <TextBlock Style="{StaticResource PopupText}" Text="Daftar Volunteer" />
+                                    <TextBlock Style="{StaticResource PopupText}" Text="Account" />
 
                                 </Border>
 
@@ -364,7 +362,5 @@ Height="50"
 
             </Grid>
         </Grid>
-
     </materialDesign:Card>
-
 </Window>

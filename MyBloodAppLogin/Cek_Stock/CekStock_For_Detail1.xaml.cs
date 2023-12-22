@@ -23,9 +23,9 @@ namespace MyBloodAppLogin.Cek_Stock
     /// <summary>
     /// Interaction logic for CekStock_For_Detail1.xaml
     /// </summary>
-    public partial class CekStock_For_Detail: Window
+    public partial class CekStock_For_Detail1 : Window
     {
-        public CekStock_For_Detail()
+        public CekStock_For_Detail1()
         {
             InitializeComponent();
         }
@@ -40,14 +40,14 @@ namespace MyBloodAppLogin.Cek_Stock
             }
         }
 
-            private void Minimize_Click(object sender, RoutedEventArgs e)
-            {
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
             Window parentWindow = Window.GetWindow(this);
             if (parentWindow != null)
             {
                 parentWindow.WindowState = WindowState.Minimized;
             }
-            }
+        }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
@@ -116,6 +116,31 @@ namespace MyBloodAppLogin.Cek_Stock
 
             // Menutup MainWindow (opsional, tergantung pada kebutuhan)
             this.Close();
+        }
+
+        private void News_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Event_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Home_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Account_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Setting_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

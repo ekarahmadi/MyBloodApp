@@ -12,21 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MyBloodAppLogin.Cek_Stock;
 using MyBloodAppLogin.Daftar_Event;
-using MyBloodAppLogin.Daftar_Voulenteer;
+using MyBloodAppLogin.EventList;
 using MyBloodAppLogin.Homepage;
+using MyBloodAppLogin.Settings;
+using MyBloodAppLogin.Cek_Stock;
+using MyBloodAppLogin.DaftarVolunteer;
+using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
 
 namespace MyBloodAppLogin.Settings
 {
     /// <summary>
     /// Interaction logic for SettingsPage.xaml
     /// </summary>
-    public partial class SettingsPage : Page
+    public partial class SettingsPage : Window
     {
         public SettingsPage()
         {
             InitializeComponent();
+            // Email_Setting.Text = "emailSetting();
+            DataContext = this;
         }
 
         //MENU BAR ATAS
@@ -43,31 +49,92 @@ namespace MyBloodAppLogin.Settings
         //MENU UTAMA
         private void LogOutBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+            MainWindow loginPage = new MainWindow();
+            loginPage.Show();
+            this.Close();
         }
 
-
-
-        //DOCKBAR Navigation
-        private void Home_Click(object sender, RoutedEventArgs e)
+        public string emailSetting()
         {
-            NavigationService?.Navigate(new Uri("\\Homepage\\Home", UriKind.Relative));
+            MainWindow emailSetting = new MainWindow();
+            return emailSetting.getEmail();
+
         }
 
-        private void Account_Click(object sender, RoutedEventArgs e)
+        //Mengambil data nilai email dari properti EnteredEmail di Class App
+        private void DisplayEmail()
         {
-            NavigationService?.Navigate(new Uri("\\DaftarEvent\\Dafatr_Event1", UriKind.Relative));
+            //Mengambil nilai email dari properti EnteredEmail pada kelas App
+            string userEmail = ((App)Application.Current).EnteredEmail;
+            string settingName = ((App)Application.Current).UserDisplayName;
+
+            //Tampilkan email di UI Setting
+            Email_Setting.Text = userEmail;
+            Nama_Setting.Text = settingName;
         }
 
-        private void Event_Click(object sender, RoutedEventArgs e)
+        
+
+            //DOCKBAR Navigation
+            private void Home_Click(object sender, RoutedEventArgs e)
+            {
+                Dashboard homepage = new Dashboard();
+
+                // Menampilkan SecondWindow
+                homepage.Show();
+
+                // Menutup MainWindow (opsional, tergantung pada kebutuhan)
+                this.Close();
+            }
+
+            private void Setting_Click(object sender, RoutedEventArgs e)
+            {
+                SettingsPage settings = new SettingsPage();
+
+                // Menampilkan SecondWindow
+                settings.Show();
+
+                // Menutup MainWindow (opsional, tergantung pada kebutuhan)
+                this.Close();
+            }
+
+            private void Account_Click(object sender, RoutedEventArgs e)
+            {
+                Event_List volunteer = new Event_List();
+
+                // Menampilkan SecondWindow
+                volunteer.Show();
+
+                // Menutup MainWindow (opsional, tergantung pada kebutuhan)
+                this.Close();
+            }
+
+            private void Event_Click(object sender, RoutedEventArgs e)
+            {
+                Daftar_Event1 dafEvent = new Daftar_Event1();
+
+                // Menampilkan SecondWindow
+                dafEvent.Show();
+
+                // Menutup MainWindow (opsional, tergantung pada kebutuhan)
+                this.Close();
+            }
+
+            private void News_Click(object sender, RoutedEventArgs e)
+            {
+                CekStock_For_Check cekStok = new CekStock_For_Check();
+
+                // Menampilkan SecondWindow
+                cekStok.Show();
+
+                // Menutup MainWindow (opsional, tergantung pada kebutuhan)
+                this.Close();
+            }
+
+        private void RefreshButton(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Uri("\\Daftar_Voulunteer\\List_Event", UriKind.Relative));
-        }
 
-        private void News_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Uri("\\DaftarEvent\\Dafatr_Event1", UriKind.Relative));
         }
-
     }
-}
+    }
+

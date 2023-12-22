@@ -1,10 +1,14 @@
-﻿using MyBloodAppLogin.Daftar_Event;
-using MyBloodAppLogin.EventList;
+﻿using MyBloodAppLogin.BLL;
+using MyBloodAppLogin.DAL;
+using MyBloodAppLogin.Cek_Stock;
+using MyBloodAppLogin.Daftar_Event;
 using MyBloodAppLogin.Homepage;
 using MyBloodAppLogin.Settings;
+using MyBloodAppLogin.EventList;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,48 +22,64 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyBloodAppLogin.Cek_Stock
+namespace MyBloodAppLogin.EventList
 {
     /// <summary>
-    /// Interaction logic for CekStock_For_Detail1.xaml
+    /// Interaction logic for List_Event.xaml
     /// </summary>
-    public partial class CekStock_For_Detail: Window
+    public partial class Event_List : Window
     {
-        public CekStock_For_Detail()
+        public Event_List()
         {
             InitializeComponent();
         }
 
+        //MENU BAR ATAS
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            // If your UserControl is hosted within a Window
-            Window parentWindow = Window.GetWindow(this);
-            if (parentWindow != null)
-            {
-                parentWindow.Close();
-            }
+            Application.Current.Shutdown();
         }
 
-            private void Minimize_Click(object sender, RoutedEventArgs e)
-            {
-            Window parentWindow = Window.GetWindow(this);
-            if (parentWindow != null)
-            {
-                parentWindow.WindowState = WindowState.Minimized;
-            }
-            }
-
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        private void Minimize_Click(object sender, RoutedEventArgs e)
         {
-            // Menangani navigasi hyperlink
-            if (e.Uri != null)
+            Window.GetWindow(this).WindowState = WindowState.Minimized;
+        }
+
+        public void GenerateDynamicUserControl()
+        {
+            StackPanel stackPanel = new StackPanel();
+            stackPanel.Children.Clear();
+            ClassBLL objbll = new ClassBLL();
+            DataTable dt = objbll.GetEventItem();
+
+            if (dt != null)
             {
-                string url = e.Uri.AbsoluteUri;
-                // Buka URL menggunakan default web browser
-                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
-                // Memberitahu sistem bahwa navigasi telah ditangani
-                e.Handled = true;
+                if (dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        UC_EventListxaml listItem = new UC_EventListxaml();
+                        listItem.DataContext = new EventModel
+                        {
+                        Event_Name = dt.Rows[i]["eventName"].ToString(),
+                        Text_Date = dt.Rows[i]["date"].ToString(),
+                        Text_Clock = dt.Rows[i]["time"].ToString(),
+                        Text_Location = dt.Rows[i]["location"].ToString(),
+                        Text_Kuota = dt.Rows[i]["quota"].ToString(),
+                        Text_Telepon = dt.Rows[i]["notelp"].ToString()
+                        };
+
+                        stackPanel.Children.Add(listItem);
+                    }
+                }
             }
+            DynamicStack.Children.Clear();
+            DynamicStack.Children.Add(stackPanel);
+        }
+
+        private void RefreshButton(object sender, RoutedEventArgs e)
+        {
+            GenerateDynamicUserControl();
         }
 
         //DOCKBAR Navigation
@@ -91,6 +111,7 @@ namespace MyBloodAppLogin.Cek_Stock
 
             // Menampilkan SecondWindow
             volunteer.Show();
+            GenerateDynamicUserControl();
 
             // Menutup MainWindow (opsional, tergantung pada kebutuhan)
             this.Close();
@@ -117,5 +138,8 @@ namespace MyBloodAppLogin.Cek_Stock
             // Menutup MainWindow (opsional, tergantung pada kebutuhan)
             this.Close();
         }
+
     }
+
+
 }

@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Window
     x:Class="MyBloodAppLogin.Homepage.Dashboard"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,23 +10,25 @@
     Title="Homepage"
     Width="450"
     Height="800"
-    
+    AllowsTransparency="True"
     Background="{x:Null}"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    
-    
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
 
     <materialDesign:Card
         Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
-        UniformCornerRadius="20">
+        UniformCornerRadius="20"
+        >
+
         <Grid Grid.Row="1" Height="750">
             <Grid.RowDefinitions>
                 <RowDefinition Height="700" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-            
+
             <Grid Grid.Row="0">
                 <Frame x:Name="homepageFrame" NavigationUIVisibility="Hidden"/>
                 <Button
@@ -40,7 +42,7 @@
                 Content="" Click="MainVolunteer_Click">
                     <Button.ContentTemplate>
                         <DataTemplate>
-                            <Image Source="\Assets\Donor.png" />
+                            <Image Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\Donor.png" />
                         </DataTemplate>
                     </Button.ContentTemplate>
                 </Button>
@@ -57,7 +59,7 @@
                 Content="Event" Click="MainEvent_Click">
                     <Button.ContentTemplate>
                         <DataTemplate>
-                            <Image Source="\Assets\DaftarEvent.png" />
+                            <Image Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\DaftarEvent.png" />
                         </DataTemplate>
                     </Button.ContentTemplate>
                 </Button>
@@ -72,18 +74,33 @@
                 FontFamily="Montserrat"
                 FontSize="23"
                 Background="DarkRed"
-                TextBlock.TextAlignment="Center">
-                    <TextBlock FontSize="30">
-                    <Run Text="Halo," />
-                    <Run Text="BRIAN" TextDecorations="Underline" />
-                    <Run Text="!" />
-                    </TextBlock>
-                </Button>
+                />
+
+                <TextBlock
+                Text="HALO"
+                FontFamily="Montserrat Bold"
+                FontSize="30" Height="33" RenderTransformOrigin="1.651,-1.091"
+                VerticalAlignment="Top" Margin="152,41,154,0"
+                Foreground="White" 
+                />
+
+                <TextBlock
+                x:Name="nameHome"
+                Text="{Binding UserDisplayName,Source={x:Static Application.Current}}"
+                FontFamily="Montserrat Bold"
+                FontSize="30" Height="33" RenderTransformOrigin="1.651,-1.091"
+                VerticalAlignment="Top" Margin="17,83,17,0"
+                Foreground="White"   
+                TextAlignment="Center"
+                />
+
+
+
                 <Button
                 x:Name="MyEvent"
                 Height="150"
                 Margin="30,167,30,353"
-                Background="White">
+                Background="White" Click="MyEvent_Click">
                     <Button.ContentTemplate>
                         <DataTemplate>
                             <TextBlock
@@ -103,7 +120,7 @@
                 BorderBrush="Transparent"
                 BorderThickness="0"
                 Content=""
-                RenderTransformOrigin="0.517,0.1">
+                RenderTransformOrigin="0.517,0.1" Click="ListEventWidget_Click">
                     <Button.ContentTemplate>
                         <DataTemplate />
                     </Button.ContentTemplate>
@@ -141,11 +158,11 @@
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="News_Click"
+        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\news_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -179,11 +196,11 @@
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Event_Click"
+        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\event_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -218,10 +235,10 @@
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        Click="Home_Click">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\home_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -255,11 +272,11 @@
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Account_Click"
+        >
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\account_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
@@ -293,10 +310,10 @@
         Height="35"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        Click="Setting_Click">
 
                         <Button.Background>
-                            <ImageBrush ImageSource="\Assets\settings_button.png" Stretch="Uniform" />
+                            <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
                         </Button.Background>
                         <Popup
             Width="80"
@@ -325,4 +342,4 @@
             </Grid>
         </Grid>
     </materialDesign:Card>
-</Page>
+</Window>

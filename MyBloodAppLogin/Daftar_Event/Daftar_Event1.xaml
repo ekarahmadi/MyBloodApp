@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Window
     x:Class="MyBloodAppLogin.Daftar_Event.Daftar_Event1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,26 +7,33 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="DaftarEvent"
-    d:DesignHeight="800"
-    d:DesignWidth="450"
+    Height="800"
+    Width="450"
+    AllowsTransparency="True"
+    Background="{x:Null}"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
 
-    <Grid
-        
+    <materialDesign:Card
+        Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
-        >
+        UniformCornerRadius="20">
 
-        <Grid Grid.Row="2" Height="750">
+        <Grid Grid.Row="3" Height="750">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35" />
-                <RowDefinition Height="665" />
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="600" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
 
             <!--  Close and Minimize  -->
 
             <!--  // Exit Button //  -->
-            <Button
+            <Grid Grid.Row="0">
+                <Button
                 x:Name="ExitBtn"
                 Width="21"
                 Height="27"
@@ -36,8 +43,8 @@
                 RenderTransformOrigin="0.527,0.787"
                 Style="{StaticResource CloseBtnStyle}" />
 
-            <!--  // MinimizeButton //  -->
-            <Button
+                <!--  // MinimizeButton //  -->
+                <Button
                 x:Name="MinimizeBtn"
                 Width="21"
                 Height="27"
@@ -46,12 +53,14 @@
                 Click="Minimize_Click"
                 RenderTransformOrigin="0.4 ,0.787"
                 Style="{StaticResource MinimizeBtnStyle}" />
+            </Grid>
 
+            <!--Header-->
             <Grid Grid.Row="1">
                 <Image
                     x:Name="Logo"
-                    Margin="7,15,327,596"
-                    Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\LOGO.png" />
+                    Margin="7,15,327,3"
+                    Source="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\LOGO.png" d:LayoutOverrides="VerticalAlignment" />
                 <TextBlock
                     x:Name="judul"
                     Margin="0,17,0,0"
@@ -61,172 +70,9 @@
                     FontSize="20"
                     Text="Pendaftaran Kegiatan"
                     TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,103,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15            "
-                    Text="Nama Organisasi"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="a"
-                    Margin="38,124,38,500"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="12"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,170,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15            "
-                    Text="Nama Event"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="b"
-                    Margin="38,191,37,433"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,237,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15    "
-                    Text="Lokasi Pelaksanaan"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="c"
-                    Margin="38,258,38,366"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,304,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15    "
-                    Text="Tanggal Pelaksanaan"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="d"
-                    Margin="38,325,37,299"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,371,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15         "
-                    Text="Kuota"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="e"
-                    Margin="38,392,37,232"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,438,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15 "
-                    Text="Nomor Telepon Panitia"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="f"
-                    Margin="38,459,38,160"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,505,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15 "
-                    Text="Sampul"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="g"
-                    Margin="38,526,37,92"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <TextBlock
-                    Margin="38,578,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    FontFamily="Copperplate Gothic Light"
-                    FontSize="15 "
-                    Text="Deskripsi Acara"
-                    TextWrapping="Wrap" />
-                <TextBox
-                    x:Name="h"
-                    Margin="38,593,37,30"
-                    materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
-                    BorderBrush="{DynamicResource MaterialDesignDivider}"
-                    BorderThickness="2"
-                    FontFamily="Sitka Banner"
-                    FontSize="18"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    TextWrapping="Wrap" />
-
-                <Button
-                    x:Name="Login"
-                    Height="55"
-                    Margin="38,656,39,89"
-                    materialDesign:ButtonAssist.CornerRadius="15"
-                    Content="Selanjutnya"
-                    FontSize="20"
-                    Style="{StaticResource MaterialDesignFlatMidBgButton}" />
-
-
                 <TextBlock
                     x:Name="judul_Copy"
-                    Margin="95,44,0,0"
+                    Margin="72,44,0,0"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
                     FontFamily="Copperplate Gothic Bold"
@@ -235,22 +81,270 @@
                     TextWrapping="Wrap" />
             </Grid>
 
+            <!--Menu-->
+            <Grid Grid.Row="2">
+                <ScrollViewer >
+                    <StackPanel>
+                        <TextBlock
+                            x:Name="OrganizationName"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Nama Organisasi"
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="DataOrganizationName"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. PMI Kota Jogja"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="EventName"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Nama Event"
+                            TextWrapping="Wrap" />
+                        
+                        <TextBox
+                            x:Name="DataEventName"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. Donor Darah Hari Bapak"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Location"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Lokasi Kegiatan"
+                            TextWrapping="Wrap" />
+
+                        <TextBox
+                            x:Name="DataLocation"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. Jalan Teknika Utara"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Date"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Tanggal Pelaksanaan"
+                            TextWrapping="Wrap"/>
+                        <TextBox
+                            x:Name="DataDate"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex 32 Desember 2023"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Clock"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Waktu Pelaksanaan"
+                            TextWrapping="Wrap"/>
+                        <TextBox
+                            x:Name="DataClock"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. 08.00 - 21.00"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Kuota"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Kuota"
+                            TextWrapping="Wrap"/>
+                        <TextBox
+                            x:Name="DataKuota"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. 200 Orang"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Telepon"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Nomor Telepon Panitia"
+                            TextWrapping="Wrap"/>
+                        <TextBox
+                            x:Name="DataTelepon"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. 6285942203722"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300"  />
+
+                        <TextBlock
+                            x:Name="Media"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            TextWrapping="Wrap"><Run Text="Pla"/><Run Language="id-id" Text="t"/><Run Text="form Sounding Lainnya"/></TextBlock>
+                        <TextBox
+                            x:Name="DataPlatform"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. Instagram"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="PlatformAccount"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Nama Account Penyebar Informasi"
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="DataPlatformAccount"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. @elhanif"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+                        <TextBlock
+                            x:Name="Description"
+                            Margin="25,5,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            FontFamily="Copperplate Gothic Light"
+                            FontSize="15            "
+                            Text="Deskripsi Kegiatan"
+                            TextWrapping="Wrap"/>
+                        <TextBox
+                            x:Name="DataDescription"
+                            Margin="20,5,61,0"
+                            materialDesign:HintAssist.Hint="Ex. Dibuka untuk umum dst"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="2"
+                            FontFamily="Sitka Banner"
+                            FontSize="12"
+                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            TextWrapping="Wrap" Width="300" />
+
+           
+                        <Grid Grid.Column="1" Margin="0,15,0,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox
+                                x:Name="cbkonfirmasiEvent"
+                                Grid.Row="0"
+                                Margin="25,0,0,0"
+                                IsChecked="True" Width="160">
+                                <TextBlock
+                                FontSize="10"
+                                TextAlignment="Justify"
+                                TextWrapping="Wrap">
+                                Dengan ini saya menyatakan bahwa data yang saya berikan adalah yang sebenarnya.
+                                </TextBlock>
+                            </CheckBox>
+                            <Button
+                                x:Name="DaftarAksi"
+                                Grid.Column="1"
+                                Margin="25,4,15,6"
+                                materialDesign:ButtonAssist.CornerRadius="15"
+                                Content="DAFTAR SEKARANG"
+                                FontFamily="Montserrat Black"
+                                FontSize="12"
+                                Style="{StaticResource MaterialDesignFlatMidBgButton}" Click="DaftarAksi_Click" />
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Button
+                x:Name="Login"
+                Height="55"
+                Margin="38,656,39,89"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Content="Selanjutnya"
+                FontSize="20"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}" />
+            </Grid>
+
+
             <!--  Dock Bar Menu  -->
             <Grid
-Grid.Row="2"
-Grid.Column="4"
-Height="50"
->
+            Grid.Row="3"
+            Grid.Column="4"
+            Height="50"
+            >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="303*"/>
                     <ColumnDefinition Width="97*"/>
                 </Grid.ColumnDefinitions>
 
                 <Border
-    Grid.Column="0"
-    Grid.ColumnSpan="2"
-    Background="DarkRed"
-    CornerRadius="0,0,0,0" />
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Background="DarkRed"
+                CornerRadius="0,0,0,0" />
 
                 <Grid Grid.ColumnSpan="2">
 
@@ -266,25 +360,25 @@ Height="50"
 
                     <!--  News  -->
                     <Button
-        x:Name="News"
-        Grid.Column="1"
-        Width="35"
-        Height="35"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+                    x:Name="News"
+                    Grid.Column="1"
+                    Width="35"
+                    Height="35"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Click="News_Click"
+                    >
 
                         <Button.Background>
                             <ImageBrush ImageSource="\Assets\news_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-            Width="80"
-            HorizontalOffset="21"
-            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
-            PlacementTarget="{Binding ElementName=News}"
-            Style="{StaticResource PopupStyle}"
-            VerticalOffset="-10">
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=News, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=News}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
 
                             <Grid>
 
@@ -304,25 +398,25 @@ Height="50"
 
                     <!--  Daftar Event  -->
                     <Button
-        x:Name="Event"
-        Grid.Column="2"
-        Width="35"
-        Height="35"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+                        x:Name="Event"
+                        Grid.Column="2"
+                        Width="35"
+                        Height="35"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" Click="Event_Click"
+                        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\event_button.png" Stretch="Uniform" />
                         </Button.Background>
 
                         <Popup
-            Width="80"
-            HorizontalOffset="21"
-            IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
-            PlacementTarget="{Binding ElementName=Event}"
-            Style="{StaticResource PopupStyle}"
-            VerticalOffset="-10">
+                            Width="80"
+                            HorizontalOffset="21"
+                            IsOpen="{Binding ElementName=Event, Path=IsMouseOver, Mode=OneWay}"
+                            PlacementTarget="{Binding ElementName=Event}"
+                            Style="{StaticResource PopupStyle}"
+                            VerticalOffset="-10">
 
                             <Grid>
 
@@ -347,8 +441,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Home_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\home_button.png" Stretch="Uniform" />
@@ -385,8 +479,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Account_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\account_button.png" Stretch="Uniform" />
@@ -422,8 +516,8 @@ Height="50"
         Width="35"
         Height="35"
         HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{StaticResource DockBtnStyle}">
+        VerticalAlignment="Center" Click="Setting_Click"
+        >
 
                         <Button.Background>
                             <ImageBrush ImageSource="C:\Users\ekara\Source\Repos\ekarahmadi\MyBloodApp\MyBloodAppLogin\Assets\settings_button.png" Stretch="Uniform" />
@@ -456,5 +550,5 @@ Height="50"
             </Grid>
 
         </Grid>
-    </Grid>
-</Page>
+    </materialDesign:Card>
+</Window>
